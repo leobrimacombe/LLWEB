@@ -231,3 +231,50 @@
     if (modalFrame.getAttribute("src") !== "about:blank") lightbox.classList.add("loaded");
   });
 })();
+
+/* =========================================================
+   Curseur « viseur » qui pointe vers la démo (section Pourquoi)
+   ========================================================= */
+(function () {
+  "use strict";
+  if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+
+  const section = document.getElementById("pourquoi");
+  const target = document.getElementById("demo-open");
+  if (!section || !target) return;
+
+  const aim = document.createElement("div");
+  aim.className = "aim";
+  aim.setAttribute("aria-hidden", "true");
+  aim.innerHTML =
+    '<span class="aim-ring"></span>' +
+    '<span class="aim-rot"><span class="aim-arrow">' +
+    '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>' +
+    "</span></span>" +
+    '<span class="aim-label">Voir la démo</span>';
+  document.body.appendChild(aim);
+
+  let mx = 0, my = 0, raf = null, visible = false, acc = 0;
+
+  function render() {
+    raf = null;
+    aim.style.transform = "translate(" + mx + "px," + my + "px)";
+    const r = target.getBoundingClientRect();
+    const ang =
+      (Math.atan2(r.top + r.height / 2 - my, r.left + r.width / 2 - mx) * 180) / Math.PI;
+    // garde le chemin le plus court (évite le tour complet au passage ±180°)
+    const delta = ((((ang - acc) % 360) + 540) % 360) - 180;
+    acc += delta;
+    aim.style.setProperty("--angle", acc.toFixed(1) + "deg");
+  }
+  function show() { if (!visible) { visible = true; aim.classList.add("show"); } }
+  function hide() { if (visible) { visible = false; aim.classList.remove("show"); } }
+
+  section.addEventListener("mousemove", function (e) {
+    mx = e.clientX;
+    my = e.clientY;
+    if (target.contains(e.target)) { hide(); } else { show(); }
+    if (!raf) raf = requestAnimationFrame(render);
+  });
+  section.addEventListener("mouseleave", hide);
+})();

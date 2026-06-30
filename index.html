@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=4" />
 </head>
 <body>
   <a class="skip-link" href="#contenu">Aller au contenu principal</a>
@@ -31,7 +31,8 @@
   <header class="site-header" id="haut">
     <div class="container header-inner">
       <a class="brand" href="#haut" aria-label="LLWeb, accueil">
-        <img class="brand-logo" src="images/LLWEB_logo-crop.png" alt="LLWeb" width="595" height="268" />
+        <img class="brand-logo brand-logo-dark" src="images/LLWEB_logo-crop.png" alt="LLWeb" width="595" height="268" />
+        <img class="brand-logo brand-logo-light" src="images/LLWEB_logo-blanc.png" alt="" aria-hidden="true" width="595" height="268" />
       </a>
 
       <nav class="main-nav" id="menu" aria-label="Navigation principale">
@@ -54,8 +55,26 @@
 
     <!-- ============ HERO ============ -->
     <section class="hero" aria-labelledby="hero-titre">
-      <div class="hero-bg" aria-hidden="true"></div>
-      <div class="container hero-inner reveal">
+      <div class="hero-bg" aria-hidden="true">
+        <span class="hero-glow hero-glow-gold"></span>
+        <span class="hero-glow hero-glow-wine"></span>
+        <span class="hero-lines"></span>
+        <span class="hero-motes">
+          <i style="--x:8%;--s:3px;--d:20s;--delay:-2s"></i>
+          <i style="--x:16%;--s:5px;--d:26s;--delay:-9s"></i>
+          <i style="--x:24%;--s:2px;--d:17s;--delay:-5s"></i>
+          <i style="--x:33%;--s:4px;--d:23s;--delay:-13s"></i>
+          <i style="--x:42%;--s:3px;--d:19s;--delay:-7s"></i>
+          <i style="--x:50%;--s:5px;--d:28s;--delay:-16s"></i>
+          <i style="--x:58%;--s:2px;--d:16s;--delay:-3s"></i>
+          <i style="--x:66%;--s:4px;--d:24s;--delay:-11s"></i>
+          <i style="--x:74%;--s:3px;--d:21s;--delay:-6s"></i>
+          <i style="--x:82%;--s:5px;--d:27s;--delay:-14s"></i>
+          <i style="--x:90%;--s:2px;--d:18s;--delay:-8s"></i>
+          <i style="--x:96%;--s:3px;--d:22s;--delay:-4s"></i>
+        </span>
+      </div>
+      <div class="container hero-inner">
         <p class="eyebrow eyebrow-gold">Agence web pour les domaines viticoles</p>
         <h1 id="hero-titre">Votre terroir mérite un grand site</h1>
         <p class="hero-lead">
@@ -440,6 +459,6 @@
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=3"></script>
 </body>
 </html>
