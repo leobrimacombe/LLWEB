@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LLWeb - Agence web</title>
+  <meta name="description" content="LLWeb conçoit des sites web élégants et performants pour les vignerons et domaines viticoles : site vitrine, boutique en ligne, œnotourisme et référencement local." />
+  <meta name="theme-color" content="#3b0a14" />
+
+  <!-- Open Graph / réseaux sociaux -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:title" content="LLWeb — Agence web pour les domaines viticoles" />
+  <meta property="og:description" content="Des sites web élégants pour les vignerons : racontez votre terroir, vendez vos cuvées en direct et accueillez les amateurs du monde entier." />
+  <meta property="og:site_name" content="LLWeb" />
+
+  <!-- Favicon (verre de vin, SVG inline) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%233b0a14'/%3E%3Cpath d='M11 7h10l-1 7a4 4 0 0 1-8 0z' fill='none' stroke='%23c9a227' stroke-width='1.6' stroke-linejoin='round'/%3E%3Cpath d='M16 18v6m-3 0h6' fill='none' stroke='%23c9a227' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E" />
+
+  <!-- Typographie -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu principal</a>
+
+  <!-- ============ EN-TÊTE / NAVIGATION ============ -->
+  <header class="site-header" id="haut">
+    <div class="container header-inner">
+      <a class="brand" href="#haut" aria-label="LLWeb, accueil">
+        <img class="brand-logo" src="images/LLWEB_logo-crop.png" alt="LLWeb" width="595" height="268" />
+      </a>
+
+      <nav class="main-nav" id="menu" aria-label="Navigation principale">
+        <a href="#services">Services</a>
+        <a href="#methode">Méthode</a>
+        <a href="#realisations">Démo</a>
+        <a href="#avis">Engagement</a>
+        <a class="btn btn-gold btn-sm nav-cta" href="#contact">Devis gratuit</a>
+      </nav>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="contenu">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-labelledby="hero-titre">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container hero-inner reveal">
+        <p class="eyebrow eyebrow-gold">Agence web pour les domaines viticoles</p>
+        <h1 id="hero-titre">Votre terroir mérite un grand site</h1>
+        <p class="hero-lead">
+          LLWeb crée des sites web élégants et performants pour les vignerons et
+          domaines viticoles. Racontez votre histoire, vendez vos cuvées en direct
+          et accueillez les amateurs du monde entier.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="#contact">Demander un devis gratuit</a>
+          <a class="btn btn-ghost" href="#realisations">Voir la démo</a>
+        </div>
+        <ul class="hero-stats" aria-label="Nos engagements">
+          <li><strong>100%</strong><span>dédié au vin</span></li>
+          <li><strong>0 €</strong><span>devis &amp; conseils</span></li>
+          <li><strong>48 h</strong><span>délai de réponse</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ BANDEAU CONFIANCE ============ -->
+    <section class="trust" aria-label="Notre exigence">
+      <div class="container">
+        <p class="trust-label">Notre exigence sur chaque projet</p>
+        <ul class="trust-logos">
+          <li>Élégant</li>
+          <li>Rapide</li>
+          <li>Sur-mesure</li>
+          <li>Responsive</li>
+          <li>Bien référencé</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="section" id="services" aria-labelledby="services-titre">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Nos services</p>
+          <h2 id="services-titre">Tout ce qu'il faut pour briller en ligne</h2>
+          <p class="section-intro">
+            Du premier verre virtuel à la vente, nous accompagnons les domaines
+            viticoles sur chaque étape de leur présence numérique.
+          </p>
+        </header>
+
+        <ul class="card-grid">
+          <li class="card reveal">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 4v5"/>
+              </svg>
+            </span>
+            <h3>Site vitrine de domaine</h3>
+            <p>Présentez votre histoire, votre terroir et vos cuvées avec une élégance à la hauteur de votre travail.</p>
+          </li>
+
+          <li class="card reveal">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9l1.5-4.5h15L21 9M4 9h16v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zM9 13h6"/>
+              </svg>
+            </span>
+            <h3>Boutique en ligne</h3>
+            <p>Vendez vos vins en direct, sans intermédiaire. Paiement sécurisé, gestion des stocks et expédition.</p>
+          </li>
+
+          <li class="card reveal">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/>
+              </svg>
+            </span>
+            <h3>Œnotourisme &amp; réservations</h3>
+            <p>Visites, dégustations, événements : recevez vos réservations en ligne, 24h/24, sans appels manqués.</p>
+          </li>
+
+          <li class="card reveal">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/>
+              </svg>
+            </span>
+            <h3>Référencement local (SEO)</h3>
+            <p>Soyez trouvé par les amateurs, les cavistes et les touristes qui cherchent un vin dans votre région.</p>
+          </li>
+
+          <li class="card reveal">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9"/><circle cx="8.5" cy="9.5" r="1.2" fill="currentColor" stroke="none"/><circle cx="15.5" cy="9.5" r="1.2" fill="currentColor" stroke="none"/><circle cx="9" cy="15" r="1.2" fill="currentColor" stroke="none"/>
+              </svg>
+            </span>
+            <h3>Identité visuelle</h3>
+            <p>Étiquettes, logo, charte graphique : une image cohérente et raffinée, du cep jusqu'au web.</p>
+          </li>
+
+          <li class="card reveal">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L4 17v3h3l5.3-5.3a4 4 0 0 0 5.4-5.4l-2.3 2.3-2-2z"/>
+              </svg>
+            </span>
+            <h3>Maintenance &amp; accompagnement</h3>
+            <p>Mises à jour, sauvegardes, conseils : nous restons à vos côtés, vendange après vendange.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ POURQUOI LLWEB ============ -->
+    <section class="section section-tint" id="pourquoi" aria-labelledby="pourquoi-titre">
+      <div class="container split">
+        <div class="split-text reveal">
+          <p class="eyebrow">Pourquoi LLWeb</p>
+          <h2 id="pourquoi-titre">Nous parlons couramment le vin</h2>
+          <p class="section-intro">
+            Nous ne faisons pas des sites « pour tout le monde ». Nous connaissons
+            les enjeux des vignerons : la saisonnalité, la vente directe, la
+            transmission d'un savoir-faire et l'art de raconter un terroir.
+          </p>
+          <ul class="check-list">
+            <li>Spécialistes du monde viticole, pas des généralistes</li>
+            <li>La vente directe, c'est plus de marge pour vous</li>
+            <li>Du sur-mesure, jamais un modèle recyclé</li>
+            <li>Un interlocuteur unique, joignable et humain</li>
+          </ul>
+          <a class="btn btn-wine" href="#contact">Parlons de votre domaine</a>
+        </div>
+        <div class="split-visual reveal">
+          <button type="button" class="demo-card" id="demo-open" aria-haspopup="dialog"
+                  aria-label="Ouvrir l'aperçu du site de démonstration en grand">
+            <span class="demo-chrome" aria-hidden="true">
+              <span class="demo-dots"><i></i><i></i><i></i></span>
+              <span class="demo-urlbar">vindemo.vercel.app</span>
+            </span>
+            <span class="demo-viewport">
+              <iframe class="demo-frame" src="https://vindemo.vercel.app/"
+                      title="Aperçu du site de démonstration" loading="lazy"
+                      scrolling="no" tabindex="-1" aria-hidden="true"></iframe>
+              <span class="demo-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H3v5M21 8V3h-5M3 16v5h5M16 21h5v-5"/></svg>
+              </span>
+              <span class="demo-hint" aria-hidden="true">
+                <span class="demo-hint-btn">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H3v5M21 8V3h-5M3 16v5h5M16 21h5v-5"/></svg>
+                  Voir la démo en grand
+                </span>
+              </span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MÉTHODE ============ -->
+    <section class="section" id="methode" aria-labelledby="methode-titre">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Notre méthode</p>
+          <h2 id="methode-titre">Quatre étapes, zéro mauvaise surprise</h2>
+        </header>
+
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step-num">01</span>
+            <h3>Échange &amp; découverte</h3>
+            <p>On visite (ou on appelle), on goûte votre univers et on définit vos objectifs.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num">02</span>
+            <h3>Conception sur-mesure</h3>
+            <p>Maquettes, choix des couleurs et de l'esprit : vous validez avant qu'on développe.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num">03</span>
+            <h3>Développement &amp; contenus</h3>
+            <p>On construit un site rapide et soigné, on intègre photos, cuvées et textes.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num">04</span>
+            <h3>Mise en ligne &amp; suivi</h3>
+            <p>On publie, on forme votre équipe et on reste disponible pour la suite.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ RÉALISATIONS ============ -->
+    <section class="section section-tint" id="realisations" aria-labelledby="realisations-titre">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Démonstration</p>
+          <h2 id="realisations-titre">La preuve par l'exemple</h2>
+          <p class="section-intro">
+            LLWeb est une jeune agence : plutôt que d'aligner des logos de clients,
+            nous préférons vous montrer concrètement notre travail. Voici un site de
+            démonstration que nous avons conçu de A à Z — exactement le soin que nous
+            mettrons dans le vôtre.
+          </p>
+        </header>
+
+        <ul class="work-grid">
+          <li class="work reveal">
+            <div class="work-thumb work-thumb-1" aria-hidden="true"><span>Accueil</span></div>
+            <div class="work-body">
+              <h3>Un accueil qui raconte</h3>
+              <p>Une page immersive qui met en valeur votre histoire et votre terroir.</p>
+            </div>
+          </li>
+          <li class="work reveal">
+            <div class="work-thumb work-thumb-2" aria-hidden="true"><span>Boutique</span></div>
+            <div class="work-body">
+              <h3>Vente en direct</h3>
+              <p>Une boutique intégrée pour écouler vos cuvées sans intermédiaire.</p>
+            </div>
+          </li>
+          <li class="work reveal">
+            <div class="work-thumb work-thumb-3" aria-hidden="true"><span>Mobile &amp; SEO</span></div>
+            <div class="work-body">
+              <h3>Rapide &amp; trouvable</h3>
+              <p>Pensé pour le mobile et bien référencé sur Google.</p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="demo-cta-row reveal">
+          <a class="btn btn-wine" href="https://vindemo.vercel.app/" target="_blank" rel="noopener">
+            Explorer le site de démo
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M19 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TÉMOIGNAGE ============ -->
+    <section class="section section-dark" id="avis" aria-labelledby="avis-titre">
+      <div class="container narrow center">
+        <p class="eyebrow eyebrow-gold reveal">Notre engagement</p>
+        <blockquote class="testimonial reveal" id="avis-titre">
+          « Nous débutons, et c'est précisément pour ça que votre projet recevra
+          toute notre attention. Pas de sous-traitance, pas de modèle recyclé :
+          un site pensé pour votre domaine, et un interlocuteur qui répond. »
+        </blockquote>
+        <p class="testimonial-author reveal">
+          <strong>L'équipe LLWeb</strong>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section" id="contact" aria-labelledby="contact-titre">
+      <div class="container split">
+        <div class="split-text reveal">
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-titre">Donnons vie à votre projet</h2>
+          <p class="section-intro">
+            Parlez-nous de votre domaine et de vos envies. Nous vous répondons
+            sous 48&nbsp;heures avec une première proposition, sans engagement.
+          </p>
+          <ul class="contact-info">
+            <li>
+              <span class="contact-ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              </span>
+              <a href="mailto:brimacombe.leo@gmail.com">brimacombe.leo@gmail.com</a>
+            </li>
+            <li>
+              <span class="contact-ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L20 13l2 5v0a2 2 0 0 1-2 2A16 16 0 0 1 4 6a2 2 0 0 1 1-2z"/></svg>
+              </span>
+              <a href="tel:+33768785238">+33 (0)7 68 78 52 38</a>
+            </li>
+            <li>
+              <span class="contact-ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              </span>
+              <span>Strasbourg &amp; toute la France</span>
+            </li>
+          </ul>
+        </div>
+
+        <form class="contact-form reveal" id="form-contact" novalidate>
+          <div class="field">
+            <label for="nom">Nom <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="nom" name="nom" autocomplete="name" required />
+          </div>
+          <div class="field">
+            <label for="domaine">Nom du domaine</label>
+            <input type="text" id="domaine" name="domaine" autocomplete="organization" />
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="email">E-mail <span class="req" aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" autocomplete="email" required />
+            </div>
+            <div class="field">
+              <label for="tel">Téléphone</label>
+              <input type="tel" id="tel" name="tel" autocomplete="tel" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="message">Votre projet <span class="req" aria-hidden="true">*</span></label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-gold btn-block">Envoyer ma demande</button>
+          <p class="form-note" id="form-note" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <div class="container map-wrap reveal">
+        <div class="contact-map">
+          <iframe
+            title="Localisation de LLWeb à Strasbourg"
+            src="https://maps.google.com/maps?q=Strasbourg,%20France&z=13&hl=fr&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+        </div>
+        <p class="map-note">
+          <span class="contact-ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          </span>
+          Strasbourg, Grand Est — nous intervenons dans toute la France.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ PIED DE PAGE ============ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a class="brand brand-light" href="#haut" aria-label="LLWeb, retour en haut">
+          <img class="brand-logo" src="images/LLWEB_logo-blanc.png" alt="LLWeb" width="595" height="268" />
+        </a>
+        <p>L'agence web des vignerons et domaines viticoles.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Pied de page">
+        <h4>Navigation</h4>
+        <a href="#services">Services</a>
+        <a href="#methode">Méthode</a>
+        <a href="#realisations">Démo</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <a href="mailto:brimacombe.leo@gmail.com">brimacombe.leo@gmail.com</a>
+        <a href="tel:+33768785238">+33 (0)7 68 78 52 38</a>
+        <p>Strasbourg &amp; toute la France</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span id="annee">2026</span> LLWeb. Tous droits réservés.</p>
+      <p><a href="#">Mentions légales</a> · <a href="#">Confidentialité</a></p>
+    </div>
+  </footer>
+
+  <!-- ============ LIGHTBOX D'APERÇU DE SITE ============ -->
+  <div class="demo-lightbox" id="demo-lightbox" hidden>
+    <div class="demo-scrim" data-demo-close></div>
+    <div class="demo-modal" role="dialog" aria-modal="true" aria-labelledby="demo-modal-title">
+      <h2 id="demo-modal-title" class="sr-only">Aperçu du site de démonstration</h2>
+      <div class="demo-modal-chrome">
+        <span class="demo-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        <a class="demo-urlbar demo-urlbar-link" href="https://vindemo.vercel.app/" target="_blank" rel="noopener">vindemo.vercel.app</a>
+        <div class="demo-modal-actions">
+          <a class="demo-open-ext btn btn-gold btn-sm" href="https://vindemo.vercel.app/" target="_blank" rel="noopener">
+            <span class="demo-open-ext-label">Ouvrir le site</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M19 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6"/></svg>
+          </a>
+          <button type="button" class="demo-close" data-demo-close aria-label="Fermer l'aperçu">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="demo-modal-body">
+        <div class="demo-loader" aria-hidden="true"><span class="demo-spinner"></span></div>
+        <iframe class="demo-modal-frame" title="Site de démonstration en grand" src="about:blank"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
