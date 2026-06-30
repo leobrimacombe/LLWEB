@@ -351,40 +351,68 @@ p { color: var(--text-soft); }
 }
 .section-intro { font-size: 1.1rem; }
 
-/* ---------- Grille de cartes (services) ---------- */
-.card-grid {
+/* ---------- Section Services — « carte du vigneron » ---------- */
+.menu-grid {
   list-style: none;
   padding: 0;
+  margin: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--sp-3);
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: clamp(2rem, 6vw, 5rem);
+  position: relative;
 }
-.card {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: var(--sp-4);
-  box-shadow: var(--shadow-sm);
-  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease), border-color 0.3s var(--ease);
+.menu-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    "icon title"
+    ".    desc";
+  column-gap: 0.9rem;
+  row-gap: 0.45rem;
+  align-items: start;
+  padding: clamp(1.4rem, 3vw, 1.9rem) 0;
+  border-top: 1px solid var(--line);
 }
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--gold-soft);
-}
-.card-icon {
+.menu-ic {
+  grid-area: icon;
+  color: var(--gold);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 52px;
-  height: 52px;
-  border-radius: 14px;
-  background: var(--cream-200);
-  color: var(--wine-700);
-  margin-bottom: var(--sp-2);
+  margin-top: 2px;
 }
-.card h3 { font-size: 1.3rem; margin-bottom: 0.5rem; }
-.card p { margin: 0; }
+.menu-item h3 {
+  grid-area: title;
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 2.2vw, 1.45rem);
+  color: var(--wine-800);
+  margin: 0;
+  line-height: 1.2;
+  transition: color 0.25s var(--ease);
+}
+.menu-item p {
+  grid-area: desc;
+  margin: 0;
+  max-width: 46ch;
+}
+.menu-item:hover h3 { color: var(--wine-700); }
+
+/* Filet vertical central + bas, façon menu plié (desktop) */
+@media (min-width: 701px) {
+  .menu-grid::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    background: var(--line);
+  }
+  .menu-item:nth-last-child(-n + 2) { border-bottom: 1px solid var(--line); }
+}
+@media (max-width: 700px) {
+  .menu-grid { grid-template-columns: 1fr; column-gap: 0; }
+}
 
 /* ---------- Section scindée (texte + visuel) ---------- */
 .split {
