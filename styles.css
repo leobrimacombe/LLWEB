@@ -868,6 +868,47 @@ p { color: var(--text-soft); }
 }
 .footer-link-btn:hover { color: #fff; }
 
+/* ---------- Pages légales ---------- */
+.subpage-header {
+  background: var(--cream);
+  border-bottom: 1px solid var(--line);
+}
+.subpage-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 72px;
+}
+.back-home {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-weight: 500;
+  color: var(--wine-700);
+}
+.back-home:hover { color: var(--wine-600); }
+.legal {
+  max-width: 800px;
+  margin-inline: auto;
+  padding-block: clamp(3rem, 6vw, 5rem);
+}
+.legal h1 { font-size: clamp(2rem, 4vw, 2.6rem); margin-bottom: var(--sp-1); }
+.legal-date { color: var(--text-soft); font-size: 0.95rem; margin-bottom: var(--sp-4); }
+.legal h2 { font-size: 1.35rem; margin: var(--sp-4) 0 var(--sp-1); }
+.legal h3 { font-size: 1.1rem; margin: var(--sp-3) 0 0.4rem; }
+.legal p, .legal li { color: var(--text-soft); }
+.legal p + p { margin-top: 0.6rem; }
+.legal ul { padding-left: 1.2rem; margin: 0.5rem 0 0; display: grid; gap: 0.4rem; }
+.legal a { text-decoration: underline; text-underline-offset: 3px; }
+.legal-note {
+  background: var(--cream-200);
+  border-left: 3px solid var(--gold);
+  padding: 0.9rem 1.1rem;
+  border-radius: 0 10px 10px 0;
+  margin-top: var(--sp-4);
+  font-size: 0.95rem;
+}
+
 /* ---------- Pied de page ---------- */
 .site-footer { background: var(--wine-900); color: rgba(247, 239, 230, 0.78); padding-top: var(--sp-6); }
 .footer-inner {
