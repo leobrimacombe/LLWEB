@@ -32,11 +32,18 @@ python -m http.server 8000
 - **Couleurs** : variables `--wine-*`, `--gold`, `--cream`… en haut de `styles.css`.
 - **Polices** : Cinzel (titres) + Josefin Sans (texte), chargées via Google Fonts dans `index.html`.
 - **Textes** : tout est dans `index.html`, en français, prêt à être adapté.
-- **Coordonnées** : remplacez `contact@llweb.fr`, le numéro de téléphone et l'adresse
+- **Coordonnées** : e-mail officiel `contact@llweb.fr` ; mettez à jour le téléphone et l'adresse
   (présents dans la section Contact **et** le pied de page).
 - **Réalisations** : remplacez les blocs « Aperçu du site » par vos captures d'écran
   (`<img src="..." alt="...">`) dans la section `#realisations`.
 - **Logos clients** : section « Ils nous font confiance ».
+
+## Prise de rendez-vous
+
+Intégrée via **Cal.com** (`cal.com/llweb/appel-decouverte`) en popup : boutons
+« Réserver un appel » dans la section Contact et le pied de page. Les RDV
+atterrissent dans l'agenda Google partagé de l'équipe. Personnalisation du
+widget : bloc `Cal.ns["appel-decouverte"]("ui", …)` en bas d'`index.html`.
 
 ## Formulaire de contact
 
