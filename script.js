@@ -134,6 +134,36 @@
   scaleThumb();
   if (thumbFrame) thumbFrame.addEventListener("load", scaleThumb);
 
+  /* ----- Anti-vol de focus : le site distant peut prendre le focus à son
+     chargement, ce qui fait défiler la page jusqu'à l'iframe. On garde la
+     position de scroll et on neutralise immédiatement. ----- */
+  let pageY = window.scrollY;
+  window.addEventListener("scroll", function () { pageY = window.scrollY; }, { passive: true });
+  window.addEventListener("blur", function () {
+    if (document.activeElement === thumbFrame) {
+      thumbFrame.blur();
+      window.scrollTo(0, pageY);
+    }
+  });
+
+  /* ----- Chargement de l'aperçu uniquement quand la carte approche de
+     l'écran (évite le chargement lointain qui provoquait le saut) ----- */
+  if (thumbFrame && thumbFrame.dataset.src) {
+    if ("IntersectionObserver" in window) {
+      const loadObs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            thumbFrame.src = thumbFrame.dataset.src;
+            loadObs.disconnect();
+          }
+        });
+      }, { rootMargin: "120px" });
+      loadObs.observe(thumbFrame);
+    } else {
+      thumbFrame.src = thumbFrame.dataset.src;
+    }
+  }
+
   /* ----- Transition FLIP (la miniature s'agrandit vers la modale) ----- */
   function flip(toThumb) {
     const thumb = card.getBoundingClientRect();
