@@ -70,7 +70,11 @@
   const annee = document.getElementById("annee");
   if (annee) annee.textContent = new Date().getFullYear();
 
-  /* ----- Formulaire de contact (démonstration) ----- */
+  /* ----- Formulaire de contact (envoi via Web3Forms → contact@llweb.fr) ----- */
+  // Clé d'accès Web3Forms (publique par conception : elle ne permet que
+  // d'envoyer vers l'adresse configurée). À récupérer sur https://web3forms.com
+  const WEB3FORMS_ACCESS_KEY = "REMPLACEZ_PAR_VOTRE_CLE";
+
   const form = document.getElementById("form-contact");
   const note = document.getElementById("form-note");
 
@@ -86,11 +90,47 @@
         return;
       }
 
-      // TODO : brancher l'envoi réel (e-mail, Formspree, API…).
-      // Pour l'instant, on simule un envoi réussi.
-      note.textContent = "Merci ! Votre demande a bien été prise en compte. Nous vous répondons sous 48 h.";
-      note.className = "form-note ok";
-      form.reset();
+      if (WEB3FORMS_ACCESS_KEY === "REMPLACEZ_PAR_VOTRE_CLE") {
+        note.textContent = "Le formulaire n'est pas encore activé — écrivez-nous à contact@llweb.fr.";
+        note.className = "form-note error";
+        return;
+      }
+
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const btnLabel = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Envoi en cours…";
+      note.textContent = "";
+      note.className = "form-note";
+
+      const data = new FormData(form);
+      data.append("access_key", WEB3FORMS_ACCESS_KEY);
+      data.append("from_name", "Site llweb.fr");
+      data.append("subject", "Nouvelle demande via llweb.fr — " + form.nom.value);
+
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" }
+      })
+        .then(function (resp) { return resp.json(); })
+        .then(function (json) {
+          if (json.success) {
+            note.textContent = "Merci ! Votre demande a bien été envoyée. Nous vous répondons sous 48 h.";
+            note.className = "form-note ok";
+            form.reset();
+          } else {
+            throw new Error(json.message || "échec de l'envoi");
+          }
+        })
+        .catch(function () {
+          note.textContent = "L'envoi a échoué. Réessayez, ou écrivez-nous à contact@llweb.fr.";
+          note.className = "form-note error";
+        })
+        .finally(function () {
+          submitBtn.disabled = false;
+          submitBtn.textContent = btnLabel;
+        });
     });
   }
 })();

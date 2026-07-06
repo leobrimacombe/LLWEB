@@ -47,10 +47,10 @@ widget : bloc `Cal.ns["appel-decouverte"]("ui", …)` en bas d'`index.html`.
 
 ## Formulaire de contact
 
-Le formulaire est en mode démonstration (aucun e-mail n'est envoyé). Pour l'activer,
-branchez un service dans `script.js` (voir le `TODO`), par exemple
-[Formspree](https://formspree.io), [Web3Forms](https://web3forms.com) ou votre
-propre API.
+Branché sur [Web3Forms](https://web3forms.com) (gratuit, 250 messages/mois) :
+les demandes arrivent sur `contact@llweb.fr`. La clé d'accès se règle dans
+`script.js` (constante `WEB3FORMS_ACCESS_KEY`). Un piège anti-spam (honeypot
+`botcheck`) est intégré au formulaire.
 
 ## Mise en ligne
 

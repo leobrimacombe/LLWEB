@@ -74,7 +74,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="styles.css?v=9" />
+  <link rel="stylesheet" href="styles.css?v=11" />
   <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
 </head>
 <body id="haut">
@@ -289,26 +289,34 @@
           <h2 id="methode-titre">Quatre étapes, zéro mauvaise surprise</h2>
         </header>
 
-        <ol class="steps">
-          <li class="step reveal">
-            <span class="step-num">01</span>
-            <h3>Échange &amp; découverte</h3>
-            <p>On se rencontre (ou on s'appelle), on découvre votre univers et on définit vos objectifs.</p>
+        <ol class="timeline">
+          <li class="tl-step reveal">
+            <span class="tl-num" aria-hidden="true">01</span>
+            <div class="tl-body">
+              <h3>Échange &amp; découverte</h3>
+              <p>On se rencontre (ou on s'appelle), on découvre votre univers et on définit vos objectifs.</p>
+            </div>
           </li>
-          <li class="step reveal">
-            <span class="step-num">02</span>
-            <h3>Conception sur-mesure</h3>
-            <p>Maquettes, choix des couleurs et de l'esprit : vous validez avant qu'on développe.</p>
+          <li class="tl-step reveal">
+            <span class="tl-num" aria-hidden="true">02</span>
+            <div class="tl-body">
+              <h3>Conception sur-mesure</h3>
+              <p>Maquettes, choix des couleurs et de l'esprit : vous validez avant qu'on développe.</p>
+            </div>
           </li>
-          <li class="step reveal">
-            <span class="step-num">03</span>
-            <h3>Développement &amp; contenus</h3>
-            <p>On construit un site rapide et soigné, on intègre photos, produits et textes.</p>
+          <li class="tl-step reveal">
+            <span class="tl-num" aria-hidden="true">03</span>
+            <div class="tl-body">
+              <h3>Développement &amp; contenus</h3>
+              <p>On construit un site rapide et soigné, on intègre photos, produits et textes.</p>
+            </div>
           </li>
-          <li class="step reveal">
-            <span class="step-num">04</span>
-            <h3>Mise en ligne &amp; suivi</h3>
-            <p>On publie, on forme votre équipe et on reste disponible pour la suite.</p>
+          <li class="tl-step reveal">
+            <span class="tl-num" aria-hidden="true">04</span>
+            <div class="tl-body">
+              <h3>Mise en ligne &amp; suivi</h3>
+              <p>On publie, on forme votre équipe et on reste disponible pour la suite.</p>
+            </div>
           </li>
         </ol>
       </div>
@@ -328,29 +336,39 @@
           </p>
         </header>
 
-        <ul class="work-grid">
-          <li class="work reveal">
-            <div class="work-thumb work-thumb-1" aria-hidden="true"><span>Accueil</span></div>
-            <div class="work-body">
-              <h3>Un accueil qui raconte</h3>
-              <p>Une page immersive qui met en valeur votre histoire et votre univers.</p>
-            </div>
-          </li>
-          <li class="work reveal">
-            <div class="work-thumb work-thumb-2" aria-hidden="true"><span>Boutique</span></div>
-            <div class="work-body">
-              <h3>Vente en direct</h3>
-              <p>Une boutique intégrée pour vendre vos produits sans intermédiaire.</p>
-            </div>
-          </li>
-          <li class="work reveal">
-            <div class="work-thumb work-thumb-3" aria-hidden="true"><span>Mobile &amp; SEO</span></div>
-            <div class="work-body">
-              <h3>Rapide &amp; trouvable</h3>
-              <p>Pensé pour le mobile et bien référencé sur Google.</p>
-            </div>
-          </li>
-        </ul>
+        <div class="showcase">
+          <a class="shot shot-main reveal" href="https://vindemo.vercel.app/" target="_blank" rel="noopener">
+            <span class="shot-chrome" aria-hidden="true"><i></i><i></i><i></i><em>vindemo.vercel.app</em></span>
+            <span class="shot-media">
+              <img src="images/demo-accueil.jpg" alt="Page d'accueil du site de démonstration : Domaine Vogel-Stein, vignoble au coucher de soleil" width="1200" height="759" loading="lazy" />
+            </span>
+            <span class="shot-caption">
+              <strong>Un accueil qui raconte</strong>
+              Une page immersive qui met en valeur votre histoire et votre univers.
+            </span>
+          </a>
+
+          <a class="shot reveal" href="https://vindemo.vercel.app/boutique" target="_blank" rel="noopener">
+            <span class="shot-chrome" aria-hidden="true"><i></i><i></i><i></i><em>vindemo.vercel.app/boutique</em></span>
+            <span class="shot-media">
+              <img src="images/demo-boutique.jpg" alt="Boutique en ligne du site de démonstration, verres de dégustation" width="1000" height="633" loading="lazy" />
+            </span>
+            <span class="shot-caption">
+              <strong>Vente en direct</strong>
+              Une boutique intégrée pour vendre vos produits sans intermédiaire.
+            </span>
+          </a>
+
+          <a class="shot shot-phone reveal" href="https://vindemo.vercel.app/" target="_blank" rel="noopener">
+            <span class="shot-media">
+              <img src="images/demo-mobile.jpg" alt="Version mobile du site de démonstration" width="480" height="1039" loading="lazy" />
+            </span>
+            <span class="shot-caption">
+              <strong>Impeccable sur mobile</strong>
+              Pensé pour le téléphone et bien référencé sur Google.
+            </span>
+          </a>
+        </div>
 
         <div class="demo-cta-row reveal">
           <a class="btn btn-wine" href="https://vindemo.vercel.app/" target="_blank" rel="noopener">
@@ -421,6 +439,9 @@
         </div>
 
         <form class="contact-form reveal" id="form-contact" novalidate>
+          <!-- Piège anti-spam (invisible pour les humains) -->
+          <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"
+                 style="display:none" aria-hidden="true" />
           <div class="field">
             <label for="nom">Nom <span class="req" aria-hidden="true">*</span></label>
             <input type="text" id="nom" name="nom" autocomplete="name" required />
@@ -539,6 +560,6 @@
     });
   </script>
 
-  <script src="script.js?v=9"></script>
+  <script src="script.js?v=10"></script>
 </body>
 </html>
