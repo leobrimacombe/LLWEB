@@ -141,8 +141,38 @@ p { color: var(--text-soft); }
 .btn:hover { transform: translateY(-2px); }
 .btn:active { transform: translateY(0); }
 
-.btn-gold { background: var(--gold); color: var(--wine-900); box-shadow: var(--shadow-sm); }
-.btn-gold:hover { background: var(--gold-soft); box-shadow: var(--shadow-md); }
+/* Bouton or — effet métal : dégradé animé + reflet qui balaie au survol */
+.btn-gold {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  color: var(--wine-900);
+  background: linear-gradient(115deg, #a8821a 0%, #c9a227 32%, #ecd382 50%, #c9a227 68%, #a8821a 100%);
+  background-size: 230% 100%;
+  background-position: 12% 0;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s var(--ease), background-position 0.65s var(--ease), box-shadow 0.3s var(--ease);
+}
+.btn-gold:hover {
+  background-position: 88% 0;
+  box-shadow: 0 12px 30px rgba(201, 162, 39, 0.38), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+.btn-gold::before {
+  content: "";
+  position: absolute;
+  top: -25%;
+  bottom: -25%;
+  left: 0;
+  width: 45%;
+  background: linear-gradient(105deg, transparent 0%, rgba(255, 255, 255, 0.55) 50%, transparent 100%);
+  transform: translateX(-150%) skewX(-18deg);
+  pointer-events: none;
+  z-index: 1;
+}
+.btn-gold:hover::before {
+  transform: translateX(330%) skewX(-18deg);
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.4, 1);
+}
 
 .btn-wine { background: var(--wine-700); color: #fff; }
 .btn-wine:hover { background: var(--wine-600); box-shadow: var(--shadow-md); }

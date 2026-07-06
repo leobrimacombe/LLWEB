@@ -1,5 +1,4 @@
 # LLWeb — robots.txt
-# ⚠️ À REMPLACER : « https://llweb.fr » par votre domaine définitif avant la mise en ligne.
 
 User-agent: *
 Allow: /

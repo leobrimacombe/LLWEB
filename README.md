@@ -55,21 +55,21 @@ classique (OVH, o2switch…) par FTP.
 
 Le site est optimisé (title/meta, Open Graph + image de partage, Twitter Cards,
 JSON-LD `ProfessionalService`, robots.txt, sitemap.xml, favicon + apple-touch-icon).
+Toutes les URLs pointent vers le domaine définitif **https://llweb.fr/** (sans www).
 
-**⚠️ Le domaine `https://llweb.fr/` est un placeholder.** Dès que le domaine
-définitif est connu, remplacez-le dans :
+Checklist de mise en ligne :
 
-1. `index.html` → balise `<link rel="canonical">`, `og:url`, `og:image`,
-   `twitter:image` et le bloc JSON-LD (`url`, `@id`, `image`, `logo`) ;
-2. `sitemap.xml` → `<loc>` ;
-3. `robots.txt` → ligne `Sitemap:`.
-
-Puis après mise en ligne :
-
-- Déclarer le site sur **Google Search Console** (et y soumettre `sitemap.xml`) ;
-- Créer une fiche **Google Business Profile** (Strasbourg) — levier n°1 du
-  référencement local ;
-- Vérifier l'aperçu de partage avec [opengraph.xyz](https://www.opengraph.xyz).
+1. **Vercel → Settings → Domains** : définir `llweb.fr` comme domaine principal
+   et `www.llweb.fr` en redirection vers celui-ci (ajouter l'enregistrement DNS
+   du `www` si Vercel le demande) ;
+2. `git push` → Vercel redéploie ;
+3. Vérifier que `https://llweb.fr/` répond en 200 (sans redirection), ainsi que
+   `/robots.txt`, `/sitemap.xml` et `/images/og-image.png` ;
+4. **Google Search Console** : ajouter la propriété `llweb.fr`, soumettre
+   `sitemap.xml`, puis « Inspection d'URL » → *Demander une indexation* ;
+5. Créer une fiche **Google Business Profile** (Strasbourg) — levier n°1 du
+   référencement local ;
+6. Vérifier l'aperçu de partage avec [opengraph.xyz](https://www.opengraph.xyz).
 
 ## À faire ensuite (idées)
 
