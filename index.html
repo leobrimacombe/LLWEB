@@ -3,26 +3,81 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LLWeb - Agence web</title>
-  <meta name="description" content="LLWeb conçoit des sites web élégants et performants pour les vignerons et domaines viticoles : site vitrine, boutique en ligne, œnotourisme et référencement local." />
+  <title>LLWeb — Agence web à Strasbourg pour artisans &amp; commerces</title>
+  <meta name="description" content="LLWeb conçoit des sites vitrines et boutiques en ligne élégants pour artisans, commerces et producteurs — à Strasbourg et dans toute la France. Devis gratuit, réponse sous 48 h." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="theme-color" content="#3b0a14" />
+
+  <!-- ⚠️ À REMPLACER avant la mise en ligne : « https://llweb.fr/ » par votre domaine définitif
+       (également dans og:url, og:image, le JSON-LD ci-dessous, sitemap.xml et robots.txt) -->
+  <link rel="canonical" href="https://llweb.fr/" />
 
   <!-- Open Graph / réseaux sociaux -->
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="fr_FR" />
-  <meta property="og:title" content="LLWeb — Agence web pour les domaines viticoles" />
-  <meta property="og:description" content="Des sites web élégants pour les vignerons : racontez votre terroir, vendez vos cuvées en direct et accueillez les amateurs du monde entier." />
+  <meta property="og:url" content="https://llweb.fr/" />
+  <meta property="og:title" content="LLWeb — L'agence web des artisans, commerces et producteurs" />
+  <meta property="og:description" content="Des sites web élégants pour les métiers de savoir-faire : racontez votre histoire, vendez en direct et faites venir les clients." />
   <meta property="og:site_name" content="LLWeb" />
+  <meta property="og:image" content="https://llweb.fr/images/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="LLWeb — l'agence web des artisans, commerces et producteurs, à Strasbourg et dans toute la France" />
 
-  <!-- Favicon (verre de vin, SVG inline) -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%233b0a14'/%3E%3Cpath d='M11 7h10l-1 7a4 4 0 0 1-8 0z' fill='none' stroke='%23c9a227' stroke-width='1.6' stroke-linejoin='round'/%3E%3Cpath d='M16 18v6m-3 0h6' fill='none' stroke='%23c9a227' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E" />
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="LLWeb — L'agence web des artisans, commerces et producteurs" />
+  <meta name="twitter:description" content="Des sites web élégants pour les métiers de savoir-faire : racontez votre histoire, vendez en direct et faites venir les clients." />
+  <meta name="twitter:image" content="https://llweb.fr/images/og-image.png" />
+
+  <!-- Favicon (logo LLWeb) -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg?v=5" />
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+
+  <!-- Données structurées (référencement local) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://llweb.fr/#agence",
+        "name": "LLWeb",
+        "description": "Agence web pour artisans, commerces et producteurs : sites vitrines, boutiques en ligne, réservations en ligne et référencement local.",
+        "url": "https://llweb.fr/",
+        "image": "https://llweb.fr/images/og-image.png",
+        "logo": "https://llweb.fr/images/og-image.png",
+        "email": "brimacombe.leo@gmail.com",
+        "telephone": "+33768785238",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Strasbourg",
+          "addressRegion": "Grand Est",
+          "addressCountry": "FR"
+        },
+        "areaServed": "FR",
+        "priceRange": "€€",
+        "knowsAbout": ["Création de site internet", "Site vitrine", "Boutique en ligne", "Référencement local", "Identité visuelle"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://llweb.fr/#site",
+        "url": "https://llweb.fr/",
+        "name": "LLWeb",
+        "inLanguage": "fr-FR",
+        "publisher": { "@id": "https://llweb.fr/#agence" }
+      }
+    ]
+  }
+  </script>
 
   <!-- Typographie -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="styles.css?v=4" />
+  <link rel="stylesheet" href="styles.css?v=7" />
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
 </head>
 <body>
   <a class="skip-link" href="#contenu">Aller au contenu principal</a>
@@ -31,8 +86,7 @@
   <header class="site-header" id="haut">
     <div class="container header-inner">
       <a class="brand" href="#haut" aria-label="LLWeb, accueil">
-        <img class="brand-logo brand-logo-dark" src="images/LLWEB_logo-crop.png" alt="LLWeb" width="595" height="268" />
-        <img class="brand-logo brand-logo-light" src="images/LLWEB_logo-blanc.png" alt="" aria-hidden="true" width="595" height="268" />
+        <img class="brand-logo" src="images/logo_complet.svg" alt="LLWeb" width="1662" height="946" />
       </a>
 
       <nav class="main-nav" id="menu" aria-label="Navigation principale">
@@ -75,19 +129,19 @@
         </span>
       </div>
       <div class="container hero-inner">
-        <p class="eyebrow eyebrow-gold">Agence web pour les domaines viticoles</p>
-        <h1 id="hero-titre">Votre terroir mérite un grand site</h1>
+        <p class="eyebrow eyebrow-gold">Agence web — artisans, commerces &amp; producteurs</p>
+        <h1 id="hero-titre">Votre savoir-faire mérite un grand site</h1>
         <p class="hero-lead">
-          LLWeb crée des sites web élégants et performants pour les vignerons et
-          domaines viticoles. Racontez votre histoire, vendez vos cuvées en direct
-          et accueillez les amateurs du monde entier.
+          LLWeb crée des sites web élégants et performants pour les artisans,
+          commerçants et producteurs. Racontez votre histoire, vendez en direct
+          et faites venir les clients — du quartier ou du monde entier.
         </p>
         <div class="hero-actions">
           <a class="btn btn-gold" href="#contact">Demander un devis gratuit</a>
           <a class="btn btn-ghost" href="#realisations">Voir la démo</a>
         </div>
         <ul class="hero-stats" aria-label="Nos engagements">
-          <li><strong>100%</strong><span>dédié au vin</span></li>
+          <li><strong>100%</strong><span>sur-mesure</span></li>
           <li><strong>0 €</strong><span>devis &amp; conseils</span></li>
           <li><strong>48 h</strong><span>délai de réponse</span></li>
         </ul>
@@ -115,8 +169,8 @@
           <p class="eyebrow">Nos services</p>
           <h2 id="services-titre">Tout ce qu'il faut pour briller en ligne</h2>
           <p class="section-intro">
-            Du premier verre virtuel à la vente, nous accompagnons les domaines
-            viticoles sur chaque étape de leur présence numérique.
+            De la première visite à la vente, nous accompagnons artisans,
+            commerces et producteurs sur chaque étape de leur présence numérique.
           </p>
         </header>
 
@@ -127,8 +181,8 @@
                 <rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 4v5"/>
               </svg>
             </span>
-            <h3>Site vitrine de domaine</h3>
-            <p>Présentez votre histoire, votre terroir et vos cuvées avec une élégance à la hauteur de votre travail.</p>
+            <h3>Site vitrine</h3>
+            <p>Présentez votre histoire, votre savoir-faire et vos produits avec une élégance à la hauteur de votre travail.</p>
           </li>
 
           <li class="menu-item reveal">
@@ -138,7 +192,7 @@
               </svg>
             </span>
             <h3>Boutique en ligne</h3>
-            <p>Vendez vos vins en direct, sans intermédiaire. Paiement sécurisé, gestion des stocks et expédition.</p>
+            <p>Vendez vos produits en direct, sans intermédiaire. Paiement sécurisé, gestion des stocks et expédition.</p>
           </li>
 
           <li class="menu-item reveal">
@@ -147,8 +201,8 @@
                 <path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/>
               </svg>
             </span>
-            <h3>Œnotourisme &amp; réservations</h3>
-            <p>Visites, dégustations, événements : recevez vos réservations en ligne, 24h/24, sans appels manqués.</p>
+            <h3>Réservations en ligne</h3>
+            <p>Tables, visites, ateliers, rendez-vous : recevez vos réservations en ligne, 24h/24, sans appels manqués.</p>
           </li>
 
           <li class="menu-item reveal">
@@ -158,7 +212,7 @@
               </svg>
             </span>
             <h3>Référencement local (SEO)</h3>
-            <p>Soyez trouvé par les amateurs, les cavistes et les touristes qui cherchent un vin dans votre région.</p>
+            <p>Soyez trouvé par les clients qui cherchent vos produits ou vos services dans votre région.</p>
           </li>
 
           <li class="menu-item reveal">
@@ -168,7 +222,7 @@
               </svg>
             </span>
             <h3>Identité visuelle</h3>
-            <p>Étiquettes, logo, charte graphique : une image cohérente et raffinée, du cep jusqu'au web.</p>
+            <p>Logo, couleurs, charte graphique : une image cohérente et raffinée, de la vitrine jusqu'au web.</p>
           </li>
 
           <li class="menu-item reveal">
@@ -178,7 +232,7 @@
               </svg>
             </span>
             <h3>Maintenance &amp; accompagnement</h3>
-            <p>Mises à jour, sauvegardes, conseils : nous restons à vos côtés, vendange après vendange.</p>
+            <p>Mises à jour, sauvegardes, conseils : nous restons à vos côtés, saison après saison.</p>
           </li>
         </ul>
       </div>
@@ -189,19 +243,19 @@
       <div class="container split">
         <div class="split-text reveal">
           <p class="eyebrow">Pourquoi LLWeb</p>
-          <h2 id="pourquoi-titre">Nous parlons couramment le vin</h2>
+          <h2 id="pourquoi-titre">Nous parlons le langage de votre métier</h2>
           <p class="section-intro">
-            Nous ne faisons pas des sites « pour tout le monde ». Nous connaissons
-            les enjeux des vignerons : la saisonnalité, la vente directe, la
-            transmission d'un savoir-faire et l'art de raconter un terroir.
+            Nous ne faisons pas des sites « pour tout le monde ». Artisan,
+            commerçant, restaurateur ou producteur : nous prenons le temps de
+            comprendre votre activité, vos saisons et ce qui fait votre différence.
           </p>
           <ul class="check-list">
-            <li>Spécialistes du monde viticole, pas des généralistes</li>
+            <li>Pensé pour les indépendants, artisans et producteurs</li>
             <li>La vente directe, c'est plus de marge pour vous</li>
             <li>Du sur-mesure, jamais un modèle recyclé</li>
             <li>Un interlocuteur unique, joignable et humain</li>
           </ul>
-          <a class="btn btn-wine" href="#contact">Parlons de votre domaine</a>
+          <a class="btn btn-wine" href="#contact">Parlons de votre projet</a>
         </div>
         <div class="split-visual reveal">
           <button type="button" class="demo-card" id="demo-open" aria-haspopup="dialog"
@@ -241,7 +295,7 @@
           <li class="step reveal">
             <span class="step-num">01</span>
             <h3>Échange &amp; découverte</h3>
-            <p>On visite (ou on appelle), on goûte votre univers et on définit vos objectifs.</p>
+            <p>On se rencontre (ou on s'appelle), on découvre votre univers et on définit vos objectifs.</p>
           </li>
           <li class="step reveal">
             <span class="step-num">02</span>
@@ -251,7 +305,7 @@
           <li class="step reveal">
             <span class="step-num">03</span>
             <h3>Développement &amp; contenus</h3>
-            <p>On construit un site rapide et soigné, on intègre photos, cuvées et textes.</p>
+            <p>On construit un site rapide et soigné, on intègre photos, produits et textes.</p>
           </li>
           <li class="step reveal">
             <span class="step-num">04</span>
@@ -271,8 +325,8 @@
           <p class="section-intro">
             LLWeb est une jeune agence : plutôt que d'aligner des logos de clients,
             nous préférons vous montrer concrètement notre travail. Voici un site de
-            démonstration que nous avons conçu de A à Z — exactement le soin que nous
-            mettrons dans le vôtre.
+            démonstration conçu de A à Z pour un domaine viticole imaginaire —
+            exactement le soin que nous mettrons dans le vôtre, quel que soit votre métier.
           </p>
         </header>
 
@@ -281,14 +335,14 @@
             <div class="work-thumb work-thumb-1" aria-hidden="true"><span>Accueil</span></div>
             <div class="work-body">
               <h3>Un accueil qui raconte</h3>
-              <p>Une page immersive qui met en valeur votre histoire et votre terroir.</p>
+              <p>Une page immersive qui met en valeur votre histoire et votre univers.</p>
             </div>
           </li>
           <li class="work reveal">
             <div class="work-thumb work-thumb-2" aria-hidden="true"><span>Boutique</span></div>
             <div class="work-body">
               <h3>Vente en direct</h3>
-              <p>Une boutique intégrée pour écouler vos cuvées sans intermédiaire.</p>
+              <p>Une boutique intégrée pour vendre vos produits sans intermédiaire.</p>
             </div>
           </li>
           <li class="work reveal">
@@ -316,7 +370,7 @@
         <blockquote class="testimonial reveal" id="avis-titre">
           « Nous débutons, et c'est précisément pour ça que votre projet recevra
           toute notre attention. Pas de sous-traitance, pas de modèle recyclé :
-          un site pensé pour votre domaine, et un interlocuteur qui répond. »
+          un site pensé pour votre activité, et un interlocuteur qui répond. »
         </blockquote>
         <p class="testimonial-author reveal">
           <strong>L'équipe LLWeb</strong>
@@ -331,7 +385,7 @@
           <p class="eyebrow">Contact</p>
           <h2 id="contact-titre">Donnons vie à votre projet</h2>
           <p class="section-intro">
-            Parlez-nous de votre domaine et de vos envies. Nous vous répondons
+            Parlez-nous de votre activité et de vos envies. Nous vous répondons
             sous 48&nbsp;heures avec une première proposition, sans engagement.
           </p>
           <ul class="contact-info">
@@ -362,8 +416,8 @@
             <input type="text" id="nom" name="nom" autocomplete="name" required />
           </div>
           <div class="field">
-            <label for="domaine">Nom du domaine</label>
-            <input type="text" id="domaine" name="domaine" autocomplete="organization" />
+            <label for="entreprise">Votre entreprise</label>
+            <input type="text" id="entreprise" name="entreprise" autocomplete="organization" />
           </div>
           <div class="field-row">
             <div class="field">
@@ -408,9 +462,9 @@
     <div class="container footer-inner">
       <div class="footer-brand">
         <a class="brand brand-light" href="#haut" aria-label="LLWeb, retour en haut">
-          <img class="brand-logo" src="images/LLWEB_logo-blanc.png" alt="LLWeb" width="595" height="268" />
+          <img class="brand-logo" src="images/logo_complet.svg" alt="LLWeb" width="1662" height="946" />
         </a>
-        <p>L'agence web des vignerons et domaines viticoles.</p>
+        <p>L'agence web des artisans, commerces et producteurs — à Strasbourg et dans toute la France.</p>
       </div>
 
       <nav class="footer-nav" aria-label="Pied de page">
@@ -459,6 +513,6 @@
     </div>
   </div>
 
-  <script src="script.js?v=3"></script>
+  <script src="script.js?v=7"></script>
 </body>
 </html>

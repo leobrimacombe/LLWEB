@@ -247,11 +247,13 @@
   aim.className = "aim";
   aim.setAttribute("aria-hidden", "true");
   aim.innerHTML =
+    '<span class="aim-inner">' +
     '<span class="aim-ring"></span>' +
     '<span class="aim-rot"><span class="aim-arrow">' +
     '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>' +
     "</span></span>" +
-    '<span class="aim-label">Voir la démo</span>';
+    '<span class="aim-label">Voir la démo</span>' +
+    "</span>";
   document.body.appendChild(aim);
 
   let mx = 0, my = 0, raf = null, visible = false, acc = 0;
@@ -273,7 +275,8 @@
   section.addEventListener("mousemove", function (e) {
     mx = e.clientX;
     my = e.clientY;
-    if (target.contains(e.target)) { hide(); } else { show(); }
+    // masque le viseur sur tout élément interactif (démo, CTA, liens…)
+    if (e.target.closest("a, button")) { hide(); } else { show(); }
     if (!raf) raf = requestAnimationFrame(render);
   });
   section.addEventListener("mouseleave", hide);

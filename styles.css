@@ -172,11 +172,8 @@ p { color: var(--text-soft); }
   box-shadow: var(--shadow-sm);
 }
 
-/* Logo : clair en haut (sur le hero), foncé une fois le header crème */
-.site-header .brand-logo-dark { display: block; }
-.site-header .brand-logo-light { display: none; }
-.site-header:not(.scrolled) .brand-logo-dark { display: none; }
-.site-header:not(.scrolled) .brand-logo-light { display: block; }
+/* Logo : noir sur le header crème, inversé en blanc sur le hero sombre */
+.site-header:not(.scrolled) .brand-logo { filter: brightness(0) invert(1); }
 
 /* En haut : liens (desktop) et barres du burger en clair */
 .site-header:not(.scrolled) .nav-toggle-bar { background: #f7efe6; }
@@ -1044,9 +1041,14 @@ p { color: var(--text-soft); }
 /* =========================================================
    Logo image (remplace le logo SVG + texte)
    ========================================================= */
-.brand-logo { height: 40px; width: auto; display: block; }
+.brand-logo {
+  display: block;
+  height: 40px;
+  width: auto;
+  transition: filter 0.3s;
+}
 .site-header .brand-logo { height: 42px; }
-.site-footer .brand-logo { height: 40px; }
+.site-footer .brand-logo { height: 40px; filter: brightness(0) invert(1); }
 @media (max-width: 520px) { .brand-logo { height: 36px; } }
 
 /* CTA centré sous la grille de démonstration */
@@ -1086,6 +1088,14 @@ p { color: var(--text-soft); }
   will-change: transform;
 }
 .aim.show { opacity: 1; }
+/* Zoom doux à l'apparition / disparition (le translate reste sur .aim) */
+.aim-inner {
+  position: absolute;
+  inset: 0;
+  transform: scale(0.35);
+  transition: transform 0.35s var(--ease);
+}
+.aim.show .aim-inner { transform: scale(1); }
 .aim-ring {
   position: absolute;
   inset: 0;
@@ -1131,5 +1141,6 @@ p { color: var(--text-soft); }
 @keyframes aimSpin { to { transform: rotate(360deg); } }
 @media (prefers-reduced-motion: reduce) {
   .aim-ring { animation: none; }
-  .aim-rot { transition: none; }
+  .aim-rot, .aim-inner { transition: none; }
+  .aim-inner { transform: scale(1); }
 }

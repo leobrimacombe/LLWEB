@@ -1,17 +1,20 @@
 # LLWeb — Site vitrine
 
-Site vitrine de **LLWeb**, agence web spécialisée pour les **vignerons et domaines viticoles**.
+Site vitrine de **LLWeb**, agence web pour les **artisans, commerces et producteurs**
+(Strasbourg & toute la France).
 
-Base statique, sans framework ni outil de build : trois fichiers, ça s'ouvre dans
+Base statique, sans framework ni outil de build : ça s'ouvre dans
 n'importe quel navigateur et ça s'héberge partout.
 
 ## Fichiers
 
 | Fichier | Rôle |
 |---|---|
-| `index.html` | Structure et contenu de la page |
-| `styles.css` | Design (palette terroir, typographie, responsive) |
-| `script.js` | Menu mobile, animations, formulaire |
+| `index.html` | Structure et contenu de la page (+ SEO : meta, JSON-LD) |
+| `styles.css` | Design (palette bordeaux/or, typographie, responsive) |
+| `script.js` | Menu mobile, animations, lightbox démo, formulaire |
+| `robots.txt` / `sitemap.xml` | Référencement |
+| `images/` | Logos, favicon, image Open Graph |
 
 ## Lancer le site
 
@@ -48,9 +51,28 @@ Site 100 % statique : déposez les trois fichiers sur n'importe quel hébergeur 
 **Netlify**, **Vercel**, **Cloudflare Pages**, **GitHub Pages**, ou un hébergement
 classique (OVH, o2switch…) par FTP.
 
+## SEO — à faire au moment de la mise en ligne
+
+Le site est optimisé (title/meta, Open Graph + image de partage, Twitter Cards,
+JSON-LD `ProfessionalService`, robots.txt, sitemap.xml, favicon + apple-touch-icon).
+
+**⚠️ Le domaine `https://llweb.fr/` est un placeholder.** Dès que le domaine
+définitif est connu, remplacez-le dans :
+
+1. `index.html` → balise `<link rel="canonical">`, `og:url`, `og:image`,
+   `twitter:image` et le bloc JSON-LD (`url`, `@id`, `image`, `logo`) ;
+2. `sitemap.xml` → `<loc>` ;
+3. `robots.txt` → ligne `Sitemap:`.
+
+Puis après mise en ligne :
+
+- Déclarer le site sur **Google Search Console** (et y soumettre `sitemap.xml`) ;
+- Créer une fiche **Google Business Profile** (Strasbourg) — levier n°1 du
+  référencement local ;
+- Vérifier l'aperçu de partage avec [opengraph.xyz](https://www.opengraph.xyz).
+
 ## À faire ensuite (idées)
 
-- Ajouter de vraies photos de domaines et de vignes (format WebP, avec `alt`).
-- Page « Réalisations » détaillée et étude de cas par projet.
+- Ajouter de vraies photos (format WebP, avec `alt` descriptifs).
+- Page « Réalisations » détaillée quand les premiers clients arrivent.
 - Mentions légales et politique de confidentialité (RGPD).
-- Données structurées `schema.org` (`LocalBusiness`) pour le référencement.
