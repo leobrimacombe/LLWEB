@@ -8,18 +8,18 @@ interface Props {
 const { active, solid = false } = Astro.props;
 
 const links = [
-  { key: "accueil", href: "index.html", label: "Accueil" },
-  { key: "offres", href: "offres.html", label: "Offres & tarifs" },
-  { key: "realisations", href: "realisations.html", label: "Réalisations" },
-  { key: "contact", href: "contact.html", label: "Contact" },
+  { key: "accueil", href: "/", label: "Accueil" },
+  { key: "offres", href: "/offres", label: "Offres & tarifs" },
+  { key: "realisations", href: "/realisations", label: "Réalisations" },
+  { key: "contact", href: "/contact", label: "Contact" },
 ] as const;
 
-const homeHref = active === "accueil" ? "#haut" : "index.html";
+const homeHref = active === "accueil" ? "#haut" : "/";
 ---
 <header class:list={["site-header", { "header-solid": solid }]}>
   <div class="container header-inner">
     <a class="brand" href={homeHref} aria-label="LLWeb, accueil">
-      <img class="brand-logo" src="images/logo_complet.svg" alt="LLWeb" width="1662" height="946" />
+      <img class="brand-logo" src="/images/logo_complet.svg" alt="LLWeb" width="1662" height="946" />
     </a>
 
     <nav class="main-nav" id="menu" aria-label="Navigation principale">
@@ -29,7 +29,7 @@ const homeHref = active === "accueil" ? "#haut" : "index.html";
           aria-current={active === l.key ? "page" : undefined}
         >{l.label}</a>
       ))}
-      <a class="btn btn-gold btn-sm nav-cta" href="contact.html">Devis gratuit</a>
+      <a class="btn btn-gold btn-sm nav-cta" href="/contact">Devis gratuit</a>
     </nav>
 
     <button class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu">
