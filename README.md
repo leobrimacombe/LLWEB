@@ -3,29 +3,34 @@
 Site vitrine de **LLWeb**, agence web pour les **artisans, commerces et producteurs**
 (Strasbourg & toute la France).
 
-Base statique, sans framework ni outil de build : ça s'ouvre dans
-n'importe quel navigateur et ça s'héberge partout.
+Construit avec **[Astro](https://astro.build)** : composants partagés (header,
+footer) définis une seule fois, sortie 100 % statique déployée sur Vercel.
 
-## Fichiers
+## Structure
 
-| Fichier | Rôle |
+| Chemin | Rôle |
 |---|---|
-| `index.html` | Structure et contenu de la page (+ SEO : meta, JSON-LD) |
-| `styles.css` | Design (palette bordeaux/or, typographie, responsive) |
-| `script.js` | Menu mobile, animations, lightbox démo, formulaire |
-| `robots.txt` / `sitemap.xml` | Référencement |
-| `images/` | Logos, favicon, image Open Graph |
+| `src/layouts/Base.astro` | `<head>` SEO + header + footer + scripts communs |
+| `src/layouts/Legal.astro` | Gabarit des pages légales |
+| `src/components/` | `Header`, `Footer`, `CalScript` (RDV) |
+| `src/pages/` | Les 7 pages (accueil, offres, réalisations, contact, légales, 404) |
+| `src/styles/global.css` | Design (palette bordeaux/or, typographie, responsive) |
+| `public/script.js` | Menu mobile, animations, lightbox démo, formulaire |
+| `public/` | Images, robots.txt, sitemap.xml |
+
+Les URLs générées gardent l'extension `.html` (`build.format: "file"`), à
+l'identique de l'ancien site : canonicals et sitemap inchangés.
 
 ## Lancer le site
 
-Double-cliquez sur `index.html`, ou pour un rendu fidèle (polices, etc.) lancez un
-petit serveur local :
-
 ```bash
-# Python
-python -m http.server 8000
-# puis ouvrez http://localhost:8000
+npm install        # première fois seulement
+npm run dev        # développement → http://localhost:4321
+npm run build      # génère le site final dans dist/
+npm run preview    # sert dist/ en local
 ```
+
+Vercel détecte Astro automatiquement : un `git push` suffit pour déployer.
 
 ## Personnaliser
 

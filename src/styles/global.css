@@ -990,6 +990,37 @@ p { color: var(--text-soft); }
   .team { grid-template-columns: 1fr; }
 }
 
+/* ---------- Offre de lancement ---------- */
+.promo-banner {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  text-align: center;
+  margin: 0 auto var(--sp-4);
+  max-width: 660px;
+  padding: 0.85rem 1.4rem;
+  border: 1px solid var(--gold);
+  border-radius: 999px;
+  background: rgba(201, 162, 39, 0.1);
+  color: var(--ink);
+  font-size: 0.95rem;
+}
+.promo-banner strong {
+  color: var(--wine-700);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+}
+.price-tag s {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--muted);
+  text-decoration-color: var(--wine-600);
+}
+
 /* ---------- Tarifs ---------- */
 .pricing {
   list-style: none;

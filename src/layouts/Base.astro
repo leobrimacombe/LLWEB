@@ -1,0 +1,91 @@
+---
+// Layout principal : <head> complet + header + footer + scripts communs.
+// Le contenu de la page va dans <slot />, les données structurées
+// spécifiques (JSON-LD) dans <slot name="head" />.
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import CalScript from "../components/CalScript.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  canonical: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  robots?: string;
+  active?: "accueil" | "offres" | "realisations" | "contact";
+  solid?: boolean;
+}
+const {
+  title,
+  description,
+  canonical,
+  ogTitle = title,
+  ogDescription = description,
+  robots = "index, follow, max-image-preview:large",
+  active,
+  solid = false,
+} = Astro.props;
+---
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta name="robots" content={robots} />
+  <meta name="theme-color" content="#3b0a14" />
+
+  <link rel="canonical" href={canonical} />
+
+  <!-- Open Graph / réseaux sociaux -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:title" content={ogTitle} />
+  <meta property="og:description" content={ogDescription} />
+  <meta property="og:site_name" content="LLWeb" />
+  <meta property="og:image" content="https://llweb.fr/images/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="LLWeb, l'agence web des artisans, commerces et producteurs, à Strasbourg et dans toute la France" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={ogTitle} />
+  <meta name="twitter:description" content={ogDescription} />
+  <meta name="twitter:image" content="https://llweb.fr/images/og-image.png" />
+
+  <!-- Favicon (logo LLWeb) -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg?v=5" />
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+
+  <slot name="head" />
+
+  <!-- Typographie -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+</head>
+<body id="haut">
+  <a class="skip-link" href="#contenu">Aller au contenu principal</a>
+
+  <Header active={active} solid={solid} />
+
+  <main id="contenu">
+    <slot />
+  </main>
+
+  <Footer />
+
+  <slot name="after" />
+
+  <CalScript />
+
+  <script is:inline src="script.js?v=11"></script>
+</body>
+</html>

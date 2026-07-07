@@ -1,0 +1,277 @@
+---
+import Base from "../layouts/Base.astro";
+---
+<Base
+  title="LLWeb | Agence web à Strasbourg pour artisans & commerces"
+  description="LLWeb conçoit des sites vitrines et boutiques en ligne élégants pour artisans, commerces et producteurs, à Strasbourg et dans toute la France. Devis gratuit, réponse sous 48 h."
+  canonical="https://llweb.fr/"
+  ogTitle="LLWeb | L'agence web des artisans, commerces et producteurs"
+  ogDescription="Des sites web élégants pour les métiers de savoir-faire : racontez votre histoire, vendez en direct et faites venir les clients."
+  active="accueil"
+>
+  <Fragment slot="head">
+    <!-- Données structurées (référencement local) -->
+    <script is:inline type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://llweb.fr/#agence",
+          "name": "LLWeb",
+          "description": "Agence web pour artisans, commerces et producteurs : sites vitrines, boutiques en ligne, réservations en ligne et référencement local.",
+          "url": "https://llweb.fr/",
+          "image": "https://llweb.fr/images/og-image.png",
+          "logo": "https://llweb.fr/images/og-image.png",
+          "email": "contact@llweb.fr",
+          "telephone": "+33768785238",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Strasbourg",
+            "addressRegion": "Grand Est",
+            "addressCountry": "FR"
+          },
+          "areaServed": "FR",
+          "priceRange": "€€",
+          "knowsAbout": ["Création de site internet", "Site vitrine", "Boutique en ligne", "Référencement local", "Identité visuelle"]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://llweb.fr/#site",
+          "url": "https://llweb.fr/",
+          "name": "LLWeb",
+          "inLanguage": "fr-FR",
+          "publisher": { "@id": "https://llweb.fr/#agence" }
+        }
+      ]
+    }
+    </script>
+  </Fragment>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" aria-labelledby="hero-titre">
+    <div class="hero-bg" aria-hidden="true">
+      <span class="hero-glow hero-glow-gold"></span>
+      <span class="hero-glow hero-glow-wine"></span>
+      <span class="hero-lines"></span>
+      <span class="hero-motes">
+        <i style="--x:8%;--s:3px;--d:20s;--delay:-2s"></i>
+        <i style="--x:16%;--s:5px;--d:26s;--delay:-9s"></i>
+        <i style="--x:24%;--s:2px;--d:17s;--delay:-5s"></i>
+        <i style="--x:33%;--s:4px;--d:23s;--delay:-13s"></i>
+        <i style="--x:42%;--s:3px;--d:19s;--delay:-7s"></i>
+        <i style="--x:50%;--s:5px;--d:28s;--delay:-16s"></i>
+        <i style="--x:58%;--s:2px;--d:16s;--delay:-3s"></i>
+        <i style="--x:66%;--s:4px;--d:24s;--delay:-11s"></i>
+        <i style="--x:74%;--s:3px;--d:21s;--delay:-6s"></i>
+        <i style="--x:82%;--s:5px;--d:27s;--delay:-14s"></i>
+        <i style="--x:90%;--s:2px;--d:18s;--delay:-8s"></i>
+        <i style="--x:96%;--s:3px;--d:22s;--delay:-4s"></i>
+      </span>
+    </div>
+    <div class="container hero-inner">
+      <p class="eyebrow eyebrow-gold">Agence web pour les artisans, commerces &amp; producteurs</p>
+      <h1 id="hero-titre">Votre savoir-faire mérite un grand site</h1>
+      <p class="hero-lead">
+        LLWeb crée des sites web élégants et performants pour les artisans,
+        commerçants et producteurs. Racontez votre histoire, vendez en direct
+        et faites venir les clients, du quartier ou du monde entier.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="contact.html">Demander un devis gratuit</a>
+        <a class="btn btn-ghost" href="realisations.html">Voir la démo</a>
+      </div>
+      <ul class="hero-stats" aria-label="Nos engagements">
+        <li><strong>100%</strong><span>sur-mesure</span></li>
+        <li><strong>0 €</strong><span>devis &amp; conseils</span></li>
+        <li><strong>48 h</strong><span>délai de réponse</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ BANDEAU CONFIANCE ============ -->
+  <section class="trust" aria-label="Notre exigence">
+    <div class="container">
+      <p class="trust-label">Notre exigence sur chaque projet</p>
+      <ul class="trust-logos">
+        <li>Élégant</li>
+        <li>Rapide</li>
+        <li>Sur-mesure</li>
+        <li>Responsive</li>
+        <li>Bien référencé</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES (aperçu) ============ -->
+  <section class="section" id="services" aria-labelledby="services-titre">
+    <div class="container">
+      <header class="section-head centered reveal">
+        <p class="eyebrow">Nos services</p>
+        <h2 id="services-titre">Tout ce qu'il faut pour briller en ligne</h2>
+        <p class="section-intro">
+          De la première visite à la vente, nous accompagnons artisans,
+          commerces et producteurs sur chaque étape de leur présence numérique.
+        </p>
+      </header>
+      <ul class="chips reveal" aria-label="Nos services">
+        <li>Site vitrine</li>
+        <li>Boutique en ligne</li>
+        <li>Réservations en ligne</li>
+        <li>Référencement local</li>
+        <li>Identité visuelle</li>
+        <li>Maintenance &amp; accompagnement</li>
+      </ul>
+      <div class="cta-row reveal">
+        <a class="btn btn-wine" href="offres.html">Découvrir nos offres &amp; tarifs</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ POURQUOI LLWEB ============ -->
+  <section class="section section-tint" id="pourquoi" aria-labelledby="pourquoi-titre">
+    <div class="container split">
+      <div class="split-text reveal">
+        <p class="eyebrow">Pourquoi LLWeb</p>
+        <h2 id="pourquoi-titre">Nous parlons le langage de votre métier</h2>
+        <p class="section-intro">
+          Nous ne faisons pas des sites « pour tout le monde ». Artisan,
+          commerçant, restaurateur ou producteur : nous prenons le temps de
+          comprendre votre activité, vos saisons et ce qui fait votre différence.
+        </p>
+        <ul class="check-list">
+          <li>Pensé pour les indépendants, artisans et producteurs</li>
+          <li>La vente directe, c'est plus de marge pour vous</li>
+          <li>Du sur-mesure, jamais un modèle recyclé</li>
+          <li>Un interlocuteur unique, joignable et humain</li>
+        </ul>
+        <a class="btn btn-wine" href="contact.html">Parlons de votre projet</a>
+      </div>
+      <div class="split-visual reveal">
+        <button type="button" class="demo-card" id="demo-open" aria-haspopup="dialog"
+                aria-label="Ouvrir l'aperçu du site de démonstration en grand">
+          <span class="demo-chrome" aria-hidden="true">
+            <span class="demo-dots"><i></i><i></i><i></i></span>
+            <span class="demo-urlbar">vindemo.vercel.app</span>
+          </span>
+          <span class="demo-viewport">
+            <iframe class="demo-frame" data-src="https://vindemo.vercel.app/"
+                    title="Aperçu du site de démonstration"
+                    scrolling="no" tabindex="-1" aria-hidden="true"></iframe>
+            <span class="demo-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H3v5M21 8V3h-5M3 16v5h5M16 21h5v-5"/></svg>
+            </span>
+            <span class="demo-hint" aria-hidden="true">
+              <span class="demo-hint-btn">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H3v5M21 8V3h-5M3 16v5h5M16 21h5v-5"/></svg>
+                Voir la démo en grand
+              </span>
+            </span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TÉMOIGNAGE ============ -->
+  <section class="section section-dark" id="avis" aria-labelledby="avis-titre">
+    <div class="container narrow center">
+      <p class="eyebrow eyebrow-gold reveal">Notre engagement</p>
+      <blockquote class="testimonial reveal" id="avis-titre">
+        « Nous débutons, et c'est précisément pour ça que votre projet recevra
+        toute notre attention. Pas de sous-traitance, pas de modèle recyclé :
+        un site pensé pour votre activité, et un interlocuteur qui répond. »
+      </blockquote>
+      <p class="testimonial-author reveal">
+        <strong>L'équipe LLWeb</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ ÉQUIPE ============ -->
+  <section class="section" id="equipe" aria-labelledby="equipe-titre">
+    <div class="container">
+      <header class="section-head centered reveal">
+        <p class="eyebrow">Qui sommes-nous</p>
+        <h2 id="equipe-titre">Les deux «&nbsp;L&nbsp;» de LLWeb</h2>
+        <p class="section-intro">
+          Pas de commerciaux, pas de sous-traitance : vous parlez directement
+          à ceux qui conçoivent votre site.
+        </p>
+      </header>
+
+      <ul class="team">
+        <li class="team-card reveal">
+          <!-- Photo réelle : remplacez le span par
+               <img class="avatar" src="images/leo.jpg" alt="Portrait de Léo Brimacombe" width="240" height="240" /> -->
+          <span class="avatar" aria-hidden="true">LB</span>
+          <h3>Léo Brimacombe</h3>
+          <p class="team-role">Co-fondateur · Design &amp; développement</p>
+          <p class="team-bio">
+            Léo conçoit et développe chaque site de A à Z : direction artistique,
+            intégration, performance. C'est lui qui transforme votre univers en
+            pages qui donnent envie.
+          </p>
+        </li>
+        <li class="team-card reveal">
+          <!-- Photo réelle : remplacez le span par
+               <img class="avatar" src="images/lukas.jpg" alt="Portrait de Lukas Schreiner" width="240" height="240" /> -->
+          <span class="avatar" aria-hidden="true">LS</span>
+          <h3>Lukas Schreiner</h3>
+          <p class="team-role">Co-fondateur · Relation client &amp; contenus</p>
+          <p class="team-bio">
+            Lukas vous accompagne du premier appel à la mise en ligne :
+            compréhension de votre métier, textes, photos et référencement
+            local. Votre interlocuteur, toujours joignable.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ CTA FINAL ============ -->
+  <section class="section section-dark" aria-labelledby="cta-titre">
+    <div class="container narrow center">
+      <p class="eyebrow eyebrow-gold reveal">Et maintenant&nbsp;?</p>
+      <h2 id="cta-titre" class="closing-title reveal">Donnons vie à votre projet</h2>
+      <p class="closing-lead reveal">
+        Devis gratuit sous 48&nbsp;h, ou un appel découverte de 30&nbsp;minutes
+        pour faire connaissance. Sans engagement.
+      </p>
+      <div class="cta-row reveal">
+        <a class="btn btn-gold" href="contact.html">Demander un devis gratuit</a>
+        <button type="button" class="btn btn-ghost"
+                data-cal-namespace="appel-decouverte"
+                data-cal-link="llweb/appel-decouverte"
+                data-cal-config='{"layout":"month_view","theme":"light"}'>Réserver un appel</button>
+      </div>
+    </div>
+  </section>
+
+  <Fragment slot="after">
+    <!-- ============ LIGHTBOX D'APERÇU DE SITE ============ -->
+    <div class="demo-lightbox" id="demo-lightbox" hidden>
+      <div class="demo-scrim" data-demo-close></div>
+      <div class="demo-modal" role="dialog" aria-modal="true" aria-labelledby="demo-modal-title">
+        <h2 id="demo-modal-title" class="sr-only">Aperçu du site de démonstration</h2>
+        <div class="demo-modal-chrome">
+          <span class="demo-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <a class="demo-urlbar demo-urlbar-link" href="https://vindemo.vercel.app/" target="_blank" rel="noopener">vindemo.vercel.app</a>
+          <div class="demo-modal-actions">
+            <a class="demo-open-ext btn btn-gold btn-sm" href="https://vindemo.vercel.app/" target="_blank" rel="noopener">
+              <span class="demo-open-ext-label">Ouvrir le site</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9M19 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6"/></svg>
+            </a>
+            <button type="button" class="demo-close" data-demo-close aria-label="Fermer l'aperçu">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="demo-modal-body">
+          <div class="demo-loader" aria-hidden="true"><span class="demo-spinner"></span></div>
+          <iframe class="demo-modal-frame" title="Site de démonstration en grand" src="about:blank"></iframe>
+        </div>
+      </div>
+    </div>
+  </Fragment>
+</Base>

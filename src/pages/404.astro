@@ -1,0 +1,30 @@
+---
+import Base from "../layouts/Base.astro";
+---
+<Base
+  title="Page introuvable | LLWeb"
+  description="La page que vous cherchez n'existe pas ou a été déplacée."
+  canonical="https://llweb.fr/404.html"
+  robots="noindex, follow"
+  solid
+>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow eyebrow-gold">Erreur 404</p>
+      <h1>Cette page s'est égarée</h1>
+      <p>
+        La page que vous cherchez n'existe pas ou a été déplacée.
+        Pas de panique : tout le reste est bien là.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container narrow center">
+      <div class="cta-row reveal">
+        <a class="btn btn-wine" href="index.html">Retour à l'accueil</a>
+        <a class="btn btn-gold" href="contact.html">Nous contacter</a>
+      </div>
+    </div>
+  </section>
+</Base>

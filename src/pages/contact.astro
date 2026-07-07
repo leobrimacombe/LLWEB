@@ -1,0 +1,113 @@
+---
+import Base from "../layouts/Base.astro";
+---
+<Base
+  title="Contact & rendez-vous | LLWeb, agence web à Strasbourg"
+  description="Demandez votre devis gratuit ou réservez un appel découverte de 30 minutes. Réponse sous 48 h. LLWeb, agence web à Strasbourg et dans toute la France."
+  canonical="https://llweb.fr/contact.html"
+  ogTitle="Contact & rendez-vous | LLWeb"
+  ogDescription="Devis gratuit sous 48 h, ou appel découverte de 30 minutes. Parlons de votre projet."
+  active="contact"
+  solid
+>
+  <!-- ============ BANDEAU DE PAGE ============ -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow eyebrow-gold">Contact</p>
+      <h1>Donnons vie à votre projet</h1>
+      <p>
+        Devis gratuit sous 48&nbsp;h, appel découverte de 30&nbsp;minutes ou
+        simple question : nous vous répondons, sans engagement.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section" id="contact" aria-labelledby="contact-titre">
+    <div class="container split">
+      <div class="split-text reveal">
+        <h2 id="contact-titre" class="sr-only">Nous contacter</h2>
+        <p class="eyebrow">Le plus rapide</p>
+
+        <div class="rdv-block">
+          <button type="button" class="btn btn-gold btn-rdv"
+                  data-cal-namespace="appel-decouverte"
+                  data-cal-link="llweb/appel-decouverte"
+                  data-cal-config='{"layout":"month_view","theme":"light"}'>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 11h18"/></svg>
+            Réserver un appel découverte
+          </button>
+          <p class="rdv-note">30 minutes · gratuit · en visio. Choisissez votre créneau.</p>
+        </div>
+
+        <ul class="contact-info">
+          <li>
+            <span class="contact-ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            </span>
+            <a href="mailto:contact@llweb.fr">contact@llweb.fr</a>
+          </li>
+          <li>
+            <span class="contact-ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L20 13l2 5v0a2 2 0 0 1-2 2A16 16 0 0 1 4 6a2 2 0 0 1 1-2z"/></svg>
+            </span>
+            <a href="tel:+33768785238">+33 (0)7 68 78 52 38</a>
+          </li>
+          <li>
+            <span class="contact-ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            </span>
+            <span>Strasbourg &amp; toute la France</span>
+          </li>
+        </ul>
+      </div>
+
+      <form class="contact-form reveal" id="form-contact" novalidate>
+        <!-- Piège anti-spam (invisible pour les humains) -->
+        <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"
+               style="display:none" aria-hidden="true" />
+        <div class="field">
+          <label for="nom">Nom <span class="req" aria-hidden="true">*</span></label>
+          <input type="text" id="nom" name="nom" autocomplete="name" required />
+        </div>
+        <div class="field">
+          <label for="entreprise">Votre entreprise</label>
+          <input type="text" id="entreprise" name="entreprise" autocomplete="organization" />
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="email">E-mail <span class="req" aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" autocomplete="email" required />
+          </div>
+          <div class="field">
+            <label for="tel">Téléphone</label>
+            <input type="tel" id="tel" name="tel" autocomplete="tel" />
+          </div>
+        </div>
+        <div class="field">
+          <label for="message">Votre projet <span class="req" aria-hidden="true">*</span></label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-gold btn-block">Envoyer ma demande</button>
+        <p class="form-note" id="form-note" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+
+    <div class="container map-wrap reveal">
+      <div class="contact-map">
+        <iframe
+          title="Localisation de LLWeb à Strasbourg"
+          src="https://maps.google.com/maps?q=Strasbourg,%20France&z=13&hl=fr&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen></iframe>
+      </div>
+      <p class="map-note">
+        <span class="contact-ic" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        </span>
+        Strasbourg, Grand Est. Nous intervenons dans toute la France.
+      </p>
+    </div>
+  </section>
+</Base>
