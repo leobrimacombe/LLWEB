@@ -73,7 +73,7 @@
   /* ----- Formulaire de contact (envoi via Web3Forms → contact@llweb.fr) ----- */
   // Clé d'accès Web3Forms (publique par conception : elle ne permet que
   // d'envoyer vers l'adresse configurée). À récupérer sur https://web3forms.com
-  const WEB3FORMS_ACCESS_KEY = "REMPLACEZ_PAR_VOTRE_CLE";
+  const WEB3FORMS_ACCESS_KEY = "fe903601-fd90-45d3-a4d2-390a2aec16d5";
 
   const form = document.getElementById("form-contact");
   const note = document.getElementById("form-note");
