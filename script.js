@@ -91,7 +91,7 @@
       }
 
       if (WEB3FORMS_ACCESS_KEY === "REMPLACEZ_PAR_VOTRE_CLE") {
-        note.textContent = "Le formulaire n'est pas encore activé — écrivez-nous à contact@llweb.fr.";
+        note.textContent = "Le formulaire n'est pas encore activé. Écrivez-nous à contact@llweb.fr.";
         note.className = "form-note error";
         return;
       }
@@ -106,7 +106,7 @@
       const data = new FormData(form);
       data.append("access_key", WEB3FORMS_ACCESS_KEY);
       data.append("from_name", "Site llweb.fr");
-      data.append("subject", "Nouvelle demande via llweb.fr — " + form.nom.value);
+      data.append("subject", "Nouvelle demande via llweb.fr : " + form.nom.value);
 
       fetch("https://api.web3forms.com/submit", {
         method: "POST",
