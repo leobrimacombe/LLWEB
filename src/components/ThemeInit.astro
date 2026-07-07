@@ -1,0 +1,36 @@
+---
+// Initialisation du thème AVANT le premier rendu (évite le flash clair→sombre) :
+// préférence mémorisée > réglage système. Gère aussi le clic sur les bascules.
+---
+<script is:inline>
+  (function () {
+    var KEY = "llweb-theme";
+    var mq = window.matchMedia("(prefers-color-scheme: dark)");
+    function apply(t) { document.documentElement.dataset.theme = t; }
+    function stored() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
+
+    apply(stored() || (mq.matches ? "dark" : "light"));
+
+    // Suit le réglage système tant que l'utilisateur n'a pas choisi manuellement
+    mq.addEventListener("change", function (e) {
+      if (!stored()) apply(e.matches ? "dark" : "light");
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      var toggles = document.querySelectorAll(".theme-toggle");
+      function syncPressed() {
+        var dark = document.documentElement.dataset.theme === "dark";
+        toggles.forEach(function (b) { b.setAttribute("aria-pressed", dark ? "true" : "false"); });
+      }
+      syncPressed();
+      toggles.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+          apply(next);
+          try { localStorage.setItem(KEY, next); } catch (e) {}
+          syncPressed();
+        });
+      });
+    });
+  })();
+</script>

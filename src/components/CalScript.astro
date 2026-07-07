@@ -1,13 +1,27 @@
 ---
 // Widget Cal.com (popup de prise de rendez-vous), thémé aux couleurs LLWeb.
+// Chargement différé : le script (~100 Ko) n'est récupéré qu'à la première
+// interaction du visiteur (ou après 5 s), pas au chargement initial de la page.
 ---
 <script is:inline type="text/javascript">
-  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-  Cal("init", "appel-decouverte", { origin: "https://cal.com" });
-  Cal.ns["appel-decouverte"]("ui", {
-    "theme": "light",
-    "styles": { "branding": { "brandColor": "#7a1b2e" } },
-    "hideEventTypeDetails": false,
-    "layout": "month_view"
-  });
+  (function () {
+    var loaded = false;
+    function loadCal() {
+      if (loaded) return;
+      loaded = true;
+      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+      Cal("init", "appel-decouverte", { origin: "https://cal.com" });
+      Cal.ns["appel-decouverte"]("ui", {
+        "theme": "light",
+        "styles": { "branding": { "brandColor": "#7a1b2e" } },
+        "hideEventTypeDetails": false,
+        "layout": "month_view"
+      });
+    }
+    // Première interaction (souris, tactile, clavier, molette) ou 5 s au plus tard
+    ["pointerdown", "pointermove", "touchstart", "keydown", "wheel", "scroll"].forEach(function (ev) {
+      window.addEventListener(ev, loadCal, { once: true, passive: true });
+    });
+    window.setTimeout(loadCal, 5000);
+  })();
 </script>

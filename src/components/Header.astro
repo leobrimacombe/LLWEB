@@ -1,6 +1,8 @@
 ---
 // En-tête commun. `active` souligne la page courante ; `solid` force le fond
 // crème (sous-pages) au lieu du header transparent posé sur le hero sombre.
+import ThemeToggle from "./ThemeToggle.astro";
+
 interface Props {
   active?: "accueil" | "offres" | "realisations" | "contact";
   solid?: boolean;
@@ -32,10 +34,13 @@ const homeHref = active === "accueil" ? "#haut" : "/";
       <a class="btn btn-gold btn-sm nav-cta" href="/contact">Devis gratuit</a>
     </nav>
 
-    <button class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu">
-      <span class="nav-toggle-bar"></span>
-      <span class="nav-toggle-bar"></span>
-      <span class="nav-toggle-bar"></span>
-    </button>
+    <div class="header-actions">
+      <ThemeToggle />
+      <button class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+    </div>
   </div>
 </header>
