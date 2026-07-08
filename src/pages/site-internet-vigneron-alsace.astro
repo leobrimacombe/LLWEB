@@ -1,0 +1,242 @@
+---
+import Base from "../layouts/Base.astro";
+---
+<Base
+  title="Création de site internet pour vigneron en Alsace | LLWeb"
+  description="LLWeb crée des sites internet pour les vignerons et domaines viticoles d'Alsace : présentation du domaine et des cuvées, vente de vin en ligne, réservation de dégustations. Devis gratuit sous 48 h."
+  canonical="https://llweb.fr/site-internet-vigneron-alsace"
+  ogTitle="Sites internet pour vignerons & domaines viticoles en Alsace"
+  ogDescription="Présentez votre domaine, vendez vos vins en direct et recevez des réservations de dégustation. Démo complète à explorer."
+  active="realisations"
+  solid
+>
+  <Fragment slot="head">
+    <!-- Données structurées : service + FAQ + fil d'Ariane -->
+    <script is:inline type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "@id": "https://llweb.fr/site-internet-vigneron-alsace#service",
+          "name": "Création de site internet pour vigneron en Alsace",
+          "serviceType": "Création de site internet pour domaine viticole",
+          "description": "Conception de sites vitrines et boutiques en ligne pour les vignerons et domaines viticoles d'Alsace : présentation du domaine et des cuvées, vente directe de vin en ligne, réservation de dégustations et de visites de cave, site multilingue pour la clientèle touristique de la route des vins.",
+          "url": "https://llweb.fr/site-internet-vigneron-alsace",
+          "provider": { "@id": "https://llweb.fr/#agence" },
+          "areaServed": [
+            "Alsace", "Route des Vins d'Alsace", "Bas-Rhin", "Haut-Rhin",
+            "Strasbourg", "Colmar", "Obernai", "Barr", "Sélestat",
+            "Ribeauvillé", "Riquewihr", "Kaysersberg", "Eguisheim", "Molsheim"
+          ],
+          "audience": { "@type": "Audience", "audienceType": "Vignerons indépendants et domaines viticoles" }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            { "@type": "Question", "name": "Combien coûte un site internet pour un vigneron ?", "acceptedAnswer": { "@type": "Answer", "text": "Un site vitrine de domaine viticole démarre à 890 € (présentation du domaine, des cuvées, contact et itinéraire). Avec la vente de vin en ligne, comptez à partir de 2 490 €. Chaque projet reçoit un devis précis, gratuit et sans engagement, sous 48 h." } },
+            { "@type": "Question", "name": "Peut-on vendre du vin en ligne légalement ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. La vente d'alcool en ligne est légale en France pour un producteur, à condition de respecter quelques obligations : vérification de la majorité de l'acheteur, mentions sanitaires obligatoires et encadrement de la présentation (loi Évin). Nous intégrons ces éléments dans la boutique dès la conception." } },
+            { "@type": "Question", "name": "Le site peut-il gérer les réservations de dégustations ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Vos visiteurs réservent un créneau de dégustation ou de visite de cave directement en ligne, 24 h/24, et vous recevez une notification. Fini les appels manqués en pleines vendanges." } },
+            { "@type": "Question", "name": "Peut-on avoir le site en allemand et en anglais ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, et sur la route des vins d'Alsace c'est souvent un vrai plus : une grande partie des visiteurs vient d'Allemagne, de Suisse et d'ailleurs. Nous réalisons des sites multilingues français / allemand / anglais." } },
+            { "@type": "Question", "name": "Vous déplacez-vous au domaine ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Nous sommes basés à Strasbourg et nous nous déplaçons volontiers dans tout le vignoble alsacien, de Marlenheim à Thann, pour découvrir votre domaine, vos vins et votre façon de travailler." } }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://llweb.fr/" },
+            { "@type": "ListItem", "position": 2, "name": "Site internet pour vigneron en Alsace", "item": "https://llweb.fr/site-internet-vigneron-alsace" }
+          ]
+        }
+      ]
+    }
+    </script>
+  </Fragment>
+
+  <!-- ============ BANDEAU DE PAGE ============ -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow eyebrow-gold">Vignerons &amp; domaines viticoles</p>
+      <h1>Un site internet à la hauteur de vos vins, en Alsace</h1>
+      <p>
+        LLWeb crée des sites pour les vignerons indépendants et les domaines
+        viticoles alsaciens : racontez votre domaine, vendez vos cuvées en
+        direct et remplissez votre caveau de dégustation.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ POURQUOI UN SITE ============ -->
+  <section class="section" id="pourquoi-vigneron" aria-labelledby="pourquoi-vigneron-titre">
+    <div class="container split">
+      <div class="split-text reveal">
+        <p class="eyebrow">Pourquoi maintenant</p>
+        <h2 id="pourquoi-vigneron-titre">Vos clients vous cherchent déjà en ligne</h2>
+        <p class="section-intro">
+          Avant de pousser la porte du caveau, le visiteur de la route des vins
+          a regardé son téléphone. L'amateur qui a aimé votre riesling au
+          restaurant vous cherche sur Google. Sans site, ces clients repartent
+          chez le voisin ; avec un beau site, ils commandent chez vous, sans
+          la marge d'un intermédiaire.
+        </p>
+        <ul class="check-list">
+          <li>Vente directe : votre marge reste au domaine</li>
+          <li>Réservation de dégustations et visites de cave en ligne</li>
+          <li>Vos cuvées, millésimes et accords présentés avec soin</li>
+          <li>Multilingue pour la clientèle allemande et internationale</li>
+          <li>Référencement local : soyez trouvé sur « vigneron + votre village »</li>
+        </ul>
+        <a class="btn btn-wine" href="/contact">Parlons de votre domaine</a>
+      </div>
+      <div class="split-visual reveal">
+        <a class="shot shot-main" href="https://vindemo.vercel.app/" target="_blank" rel="noopener">
+          <span class="shot-chrome" aria-hidden="true"><i></i><i></i><i></i><em>vindemo.vercel.app</em></span>
+          <span class="shot-media">
+            <img src="/images/demo-accueil.jpg" alt="Site de démonstration d'un domaine viticole alsacien créé par LLWeb : le Domaine Vogel-Stein" width="1200" height="759" loading="lazy" />
+          </span>
+          <span class="shot-caption">
+            <strong>Notre démo : le Domaine Vogel-Stein</strong>
+            Un site de domaine viticole complet, conçu de A à Z. Cliquez pour l'explorer.
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CE QUE COMPREND LE SITE ============ -->
+  <section class="section section-tint" id="inclus" aria-labelledby="inclus-titre">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="eyebrow">Pensé pour le vin</p>
+        <h2 id="inclus-titre">Un site qui connaît votre métier</h2>
+        <p class="section-intro">
+          Pas un modèle générique repeint aux couleurs du vin : chaque élément
+          est pensé pour un domaine viticole.
+        </p>
+      </header>
+
+      <ul class="menu-grid">
+        <li class="menu-item reveal">
+          <span class="menu-ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2h8M9 2v6.3a5 5 0 0 1-.7 2.6L6 15.5A4 4 0 0 0 9.4 22h5.2a4 4 0 0 0 3.4-6.5l-2.3-4.6a5 5 0 0 1-.7-2.6V2"/></svg>
+          </span>
+          <h3>Vos cuvées mises en scène</h3>
+          <p>Chaque vin présenté avec son cépage, son millésime, ses accords et votre mot de vigneron. De quoi donner soif avant même la dégustation.</p>
+        </li>
+        <li class="menu-item reveal">
+          <span class="menu-ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l1.5-4.5h15L21 9M4 9h16v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zM9 13h6"/></svg>
+          </span>
+          <h3>Vente de vin en ligne</h3>
+          <p>Boutique avec paiement sécurisé, gestion des stocks par millésime, expédition ou retrait au caveau. Conforme aux obligations de vente d'alcool.</p>
+        </li>
+        <li class="menu-item reveal">
+          <span class="menu-ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>
+          </span>
+          <h3>Réservation de dégustations</h3>
+          <p>Visites de cave, dégustations, événements aux vendanges : vos visiteurs réservent en ligne, vous êtes prévenu, sans un coup de fil.</p>
+        </li>
+        <li class="menu-item reveal">
+          <span class="menu-ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg>
+          </span>
+          <h3>Français, allemand, anglais</h3>
+          <p>La route des vins attire une clientèle allemande, suisse et internationale : un site multilingue la transforme en clients du caveau.</p>
+        </li>
+        <li class="menu-item reveal">
+          <span class="menu-ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+          </span>
+          <h3>Référencement local</h3>
+          <p>Fiche Google optimisée et pages pensées pour les recherches « vigneron », « cave » ou « dégustation » autour de votre village.</p>
+        </li>
+        <li class="menu-item reveal">
+          <span class="menu-ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          </span>
+          <h3>Itinéraire vers le caveau</h3>
+          <p>Horaires d'ouverture, carte, itinéraire en un clic : le visiteur de passage trouve votre domaine sans se perdre dans le vignoble.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ ZONE D'INTERVENTION ============ -->
+  <section class="section" id="zone" aria-labelledby="zone-titre">
+    <div class="container">
+      <header class="section-head centered reveal">
+        <p class="eyebrow">Zone d'intervention</p>
+        <h2 id="zone-titre">Tout le vignoble alsacien, de Marlenheim à Thann</h2>
+        <p class="section-intro">
+          Basés à Strasbourg, nous nous déplaçons dans tout le Bas-Rhin et le
+          Haut-Rhin pour rencontrer les vignerons, déguster vos vins et
+          comprendre votre domaine avant d'en dessiner le site.
+        </p>
+      </header>
+      <ul class="chips reveal" aria-label="Villes et villages du vignoble où nous intervenons">
+        <li>Strasbourg</li>
+        <li>Molsheim</li>
+        <li>Obernai</li>
+        <li>Barr</li>
+        <li>Sélestat</li>
+        <li>Ribeauvillé</li>
+        <li>Riquewihr</li>
+        <li>Kaysersberg</li>
+        <li>Colmar</li>
+        <li>Eguisheim</li>
+        <li>Rouffach</li>
+        <li>Guebwiller</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ FAQ VIGNERONS ============ -->
+  <section class="section section-tint" id="faq" aria-labelledby="faq-titre">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="eyebrow">Questions fréquentes</p>
+        <h2 id="faq-titre">Ce que les vignerons nous demandent</h2>
+      </header>
+
+      <div class="faq">
+        <details class="faq-item reveal">
+          <summary>Combien coûte un site internet pour un vigneron&nbsp;?<span class="faq-ic" aria-hidden="true"></span></summary>
+          <p>Un site vitrine de domaine viticole (présentation du domaine, des cuvées, contact et itinéraire vers le caveau) démarre à 890&nbsp;€. Avec la vente de vin en ligne, comptez à partir de 2&nbsp;490&nbsp;€. Chaque projet reçoit un devis précis, gratuit et sans engagement, sous 48&nbsp;h.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Peut-on vendre du vin en ligne légalement&nbsp;?<span class="faq-ic" aria-hidden="true"></span></summary>
+          <p>Oui. La vente d'alcool en ligne est légale en France pour un producteur, à condition de respecter quelques obligations&nbsp;: vérification de la majorité de l'acheteur, mentions sanitaires obligatoires et présentation encadrée par la loi Évin. Nous intégrons tout cela dans la boutique dès la conception, vous n'avez pas à y penser.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Le site peut-il gérer les réservations de dégustations&nbsp;?<span class="faq-ic" aria-hidden="true"></span></summary>
+          <p>Oui. Vos visiteurs choisissent un créneau de dégustation ou de visite de cave directement en ligne, 24&nbsp;h/24, et vous recevez une notification. Fini les appels manqués quand vous êtes dans les vignes ou en pleines vendanges.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Peut-on avoir le site en allemand et en anglais&nbsp;?<span class="faq-ic" aria-hidden="true"></span></summary>
+          <p>Oui, et sur la route des vins c'est souvent un vrai plus&nbsp;: une grande partie des visiteurs vient d'Allemagne, de Suisse et d'ailleurs. Nous réalisons des sites multilingues français&nbsp;/ allemand&nbsp;/ anglais.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Vous déplacez-vous au domaine&nbsp;?<span class="faq-ic" aria-hidden="true"></span></summary>
+          <p>Oui, et c'est même notre façon préférée de commencer. Nous sommes basés à Strasbourg et nous nous déplaçons dans tout le vignoble alsacien pour découvrir votre domaine, vos vins et votre façon de travailler&nbsp;: c'est ce qui donne un site qui vous ressemble.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA FINAL ============ -->
+  <section class="section section-dark" aria-labelledby="cta-titre">
+    <div class="container narrow center">
+      <p class="eyebrow eyebrow-gold reveal">Et maintenant&nbsp;?</p>
+      <h2 id="cta-titre" class="closing-title reveal">Faisons goûter vos vins au monde entier</h2>
+      <p class="closing-lead reveal">
+        Explorez notre <a href="https://vindemo.vercel.app/" target="_blank" rel="noopener">site de démonstration</a>,
+        puis parlons de votre domaine&nbsp;: devis gratuit sous 48&nbsp;h, sans engagement.
+      </p>
+      <div class="cta-row reveal">
+        <a class="btn btn-gold" href="/contact">Demander un devis gratuit</a>
+        <a class="btn btn-ghost" href="/realisations">Voir la démo en détail</a>
+      </div>
+    </div>
+  </section>
+</Base>

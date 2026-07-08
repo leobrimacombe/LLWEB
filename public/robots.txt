@@ -1,6 +1,39 @@
 # LLWeb — robots.txt
+# Tous les robots sont les bienvenus, y compris les crawlers d'IA
+# (GPTBot, ClaudeBot, PerplexityBot, Google-Extended…) : nous souhaitons
+# que LLWeb puisse être recommandé par les moteurs de réponse et chatbots.
 
 User-agent: *
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: meta-externalagent
 Allow: /
 
 Sitemap: https://llweb.fr/sitemap.xml
