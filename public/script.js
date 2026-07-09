@@ -7,11 +7,14 @@
   /* ----- Menu mobile ----- */
   const toggle = document.querySelector(".nav-toggle");
   const nav = document.getElementById("menu");
+  const headerEl = document.querySelector(".site-header");
 
   function closeMenu() {
     nav.classList.remove("open");
     toggle.setAttribute("aria-expanded", "false");
     toggle.setAttribute("aria-label", "Ouvrir le menu");
+    if (headerEl) headerEl.classList.remove("menu-open");
+    document.body.style.overflow = "";
   }
 
   if (toggle && nav) {
@@ -19,12 +22,23 @@
       const open = nav.classList.toggle("open");
       toggle.setAttribute("aria-expanded", String(open));
       toggle.setAttribute("aria-label", open ? "Fermer le menu" : "Ouvrir le menu");
+      if (headerEl) headerEl.classList.toggle("menu-open", open);
+      document.body.style.overflow = open ? "hidden" : "";
     });
 
     // Refermer après un clic sur un lien
     nav.querySelectorAll("a").forEach(function (link) {
       link.addEventListener("click", closeMenu);
     });
+
+    // Croix de fermeture dans le volet
+    const navClose = nav.querySelector(".nav-close");
+    if (navClose) {
+      navClose.addEventListener("click", function () {
+        closeMenu();
+        toggle.focus();
+      });
+    }
 
     // Refermer avec la touche Échap
     document.addEventListener("keydown", function (e) {

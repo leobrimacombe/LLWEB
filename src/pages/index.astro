@@ -82,11 +82,10 @@ import Base from "../layouts/Base.astro";
         <a class="btn btn-gold" href="/contact">Demander un devis gratuit</a>
         <a class="btn btn-ghost" href="/realisations">Voir la démo</a>
       </div>
-      <ul class="hero-stats" aria-label="Nos engagements">
-        <li><strong>100%</strong><span>sur-mesure</span></li>
-        <li><strong>0 €</strong><span>devis &amp; conseils</span></li>
-        <li><strong>48 h</strong><span>délai de réponse</span></li>
-      </ul>
+      <p class="hero-note">
+        Devis et conseils gratuits, réponse sous 48&nbsp;h. Chaque site est
+        dessiné et développé à la main, à Strasbourg.
+      </p>
     </div>
   </section>
 
@@ -108,7 +107,6 @@ import Base from "../layouts/Base.astro";
   <section class="section" id="services" aria-labelledby="services-titre">
     <div class="container">
       <header class="section-head centered reveal">
-        <p class="eyebrow">Nos services</p>
         <h2 id="services-titre">Tout ce qu'il faut pour briller en ligne</h2>
         <p class="section-intro">
           De la première visite à la vente, nous accompagnons artisans,
@@ -133,15 +131,17 @@ import Base from "../layouts/Base.astro";
   <section class="section section-tint" id="pourquoi" aria-labelledby="pourquoi-titre">
     <div class="container split">
       <div class="split-text reveal">
-        <p class="eyebrow">Pourquoi LLWeb</p>
         <h2 id="pourquoi-titre">Nous parlons le langage de votre métier</h2>
         <p class="section-intro">
           Nous ne faisons pas des sites « pour tout le monde ». Artisan,
           commerçant, restaurateur, vigneron ou producteur : nous prenons le
           temps de comprendre votre activité, vos saisons et ce qui fait votre
-          différence. Vous êtes vigneron en Alsace&nbsp;? Découvrez notre
-          <a href="/site-internet-vigneron-alsace">offre dédiée aux domaines viticoles</a>.
+          différence.
         </p>
+        <a class="link-arrow" href="/site-internet-vigneron-alsace">
+          Vous êtes vigneron en Alsace&nbsp;? Voir notre offre dédiée
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
         <ul class="check-list">
           <li>Pensé pour les indépendants, artisans et producteurs</li>
           <li>La vente directe, c'est plus de marge pour vous</li>
@@ -179,7 +179,6 @@ import Base from "../layouts/Base.astro";
   <!-- ============ TÉMOIGNAGE ============ -->
   <section class="section section-dark" id="avis" aria-labelledby="avis-titre">
     <div class="container narrow center">
-      <p class="eyebrow eyebrow-gold reveal">Notre engagement</p>
       <blockquote class="testimonial reveal" id="avis-titre">
         « Nous débutons, et c'est précisément pour ça que votre projet recevra
         toute notre attention. Pas de sous-traitance, pas de modèle recyclé :
@@ -195,12 +194,11 @@ import Base from "../layouts/Base.astro";
   <section class="section" id="equipe" aria-labelledby="equipe-titre">
     <div class="container">
       <header class="section-head centered reveal">
-        <p class="eyebrow">Qui sommes-nous</p>
         <h2 id="equipe-titre">Les deux «&nbsp;L&nbsp;» de LLWeb</h2>
         <p class="section-intro">
-          Pas d'organigramme, pas de commerciaux, pas de sous-traitance :
-          nous faisons tout à deux, de l'écoute au design et au développement.
-          Sur votre projet, vous nous avez tous les deux.
+          LLWeb, c'est nous deux. Nous faisons tout nous-mêmes, de l'écoute
+          au design et au développement, et sur votre projet vous nous avez
+          tous les deux.
         </p>
       </header>
 
@@ -238,7 +236,6 @@ import Base from "../layouts/Base.astro";
   <!-- ============ CTA FINAL ============ -->
   <section class="section section-dark" aria-labelledby="cta-titre">
     <div class="container narrow center">
-      <p class="eyebrow eyebrow-gold reveal">Et maintenant&nbsp;?</p>
       <h2 id="cta-titre" class="closing-title reveal">Donnons vie à votre projet</h2>
       <p class="closing-lead reveal">
         Devis gratuit sous 48&nbsp;h, ou un appel découverte de 30&nbsp;minutes

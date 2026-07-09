@@ -225,8 +225,6 @@ p { color: var(--text-soft); }
   border-bottom-color: var(--line);
 }
 
-/* Lien de navigation actif : filet doré permanent */
-.main-nav a:not(.btn)[aria-current="page"]::after { width: 100%; }
 .header-inner {
   display: flex;
   align-items: center;
@@ -249,24 +247,49 @@ p { color: var(--text-soft); }
   color: var(--wine-800);
 }
 
-.main-nav { display: flex; align-items: center; gap: clamp(1rem, 2.4vw, 2rem); }
+.main-nav { display: flex; align-items: center; gap: clamp(0.4rem, 1.4vw, 1.1rem); }
 .main-nav a {
   color: var(--ink);
   font-weight: 500;
   letter-spacing: 0.02em;
   position: relative;
+  transition: color 0.2s, background-color 0.25s var(--ease);
 }
-.main-nav a:not(.btn)::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 0;
-  height: 2px;
-  background: var(--gold);
-  transition: width 0.25s var(--ease);
+/* Survol : reflet métallique doré qui balaie le texte (même or que les
+   boutons), puis le lien reste en or métallique tant qu'on est dessus.
+   Page courante : texte doré, sans décor. */
+.main-nav a:not(.btn) {
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  background-image: linear-gradient(
+    105deg,
+    #a8821a 0%,
+    #c9a227 12%,
+    #ecd382 20%,
+    #c9a227 28%,
+    #a8821a 33%,
+    #ecd382 46%,
+    currentColor 60%,
+    currentColor 100%
+  );
+  background-size: 300% 100%;
+  background-position: 100% 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background-position 0.9s var(--ease);
 }
-.main-nav a:not(.btn):hover::after { width: 100%; }
+.main-nav a:not(.btn):hover { background-position: 0% 0; }
+.main-nav a:not(.btn)[aria-current="page"] { color: #a8821a; }
+@media (min-width: 861px) {
+  .site-header:not(.scrolled):not(.header-solid) .main-nav a:not(.btn)[aria-current="page"] {
+    color: var(--gold-soft);
+  }
+}
+[data-theme="dark"] .main-nav a:not(.btn)[aria-current="page"] { color: var(--gold-soft); }
+
+/* Croix de fermeture du volet mobile (masquée sur desktop) */
+.nav-close { display: none; }
 
 /* Bouton menu mobile */
 .nav-toggle {
@@ -389,7 +412,7 @@ p { color: var(--text-soft); }
 .hero-inner > h1 { animation-delay: 0.3s; }
 .hero-inner > .hero-lead { animation-delay: 0.5s; }
 .hero-inner > .hero-actions { animation-delay: 0.68s; }
-.hero-inner > .hero-stats { animation-delay: 0.85s; }
+.hero-inner > .hero-note { animation-delay: 0.85s; }
 @keyframes heroIn {
   from { opacity: 0; transform: translateY(24px); }
   to { opacity: 1; transform: none; }
@@ -416,28 +439,13 @@ p { color: var(--text-soft); }
 }
 .hero-actions { display: flex; flex-wrap: wrap; gap: var(--sp-2); margin-bottom: var(--sp-6); }
 
-.hero-stats {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: clamp(1.5rem, 5vw, 3.5rem);
+.hero-note {
   border-top: 1px solid rgba(255, 255, 255, 0.15);
-  padding-top: var(--sp-4);
-}
-.hero-stats li { display: flex; flex-direction: column; }
-.hero-stats strong {
-  font-family: var(--font-display);
-  font-size: clamp(1.8rem, 4vw, 2.4rem);
-  color: var(--gold-soft);
-  line-height: 1;
-}
-.hero-stats span {
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: rgba(247, 239, 230, 0.7);
-  margin-top: 0.4rem;
+  padding-top: var(--sp-3);
+  color: rgba(247, 239, 230, 0.75);
+  font-size: 1rem;
+  max-width: 52ch;
+  margin: 0;
 }
 
 /* ---------- Bandeau confiance ---------- */
@@ -477,7 +485,39 @@ p { color: var(--text-soft); }
   font-size: clamp(1.9rem, 4vw, 2.8rem);
   margin-bottom: var(--sp-2);
 }
+
+/* Filet doré au-dessus des titres de section */
+.section-head h2::before,
+.split-text h2::before,
+.closing-title::before {
+  content: "";
+  display: block;
+  width: 46px;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--gold);
+  margin-bottom: 1.2rem;
+}
+.section-head.centered h2::before,
+.closing-title::before { margin-inline: auto; }
 .section-intro { font-size: 1.1rem; }
+
+/* Lien d'appel avec flèche (renvoi vers une page dédiée) */
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: var(--sp-2);
+  font-weight: 600;
+  color: var(--wine-700);
+  padding-bottom: 3px;
+  border-bottom: 2px solid var(--gold);
+}
+.link-arrow svg { transition: transform 0.25s var(--ease); }
+.link-arrow:hover { color: var(--wine-600); }
+.link-arrow:hover svg { transform: translateX(4px); }
+[data-theme="dark"] .link-arrow { color: #e2a9b5; }
+[data-theme="dark"] .link-arrow:hover { color: #f0c6cf; }
 
 /* ---------- Section Services — « carte du vigneron » ---------- */
 .menu-grid {
@@ -749,9 +789,7 @@ p { color: var(--text-soft); }
   height: 100%;
   object-fit: cover;
   object-position: top;
-  transition: transform 0.5s var(--ease);
 }
-.shot:hover .shot-media img { transform: scale(1.045); }
 
 .shot-caption {
   display: block;
@@ -1209,9 +1247,8 @@ p { color: var(--text-soft); }
 .legal a { text-decoration: underline; text-underline-offset: 3px; }
 .legal-note {
   background: var(--cream-200);
-  border-left: 3px solid var(--gold);
   padding: 0.9rem 1.1rem;
-  border-radius: 0 10px 10px 0;
+  border-radius: 10px;
   margin-top: var(--sp-4);
   font-size: 0.95rem;
 }
@@ -1264,25 +1301,109 @@ p { color: var(--text-soft); }
   .footer-brand { grid-column: 1 / -1; }
 
   .nav-toggle { display: flex; }
+
+  /* Volet plein écran « cave » : même univers que le hero sombre */
   .main-nav {
     position: fixed;
-    inset: 72px 0 auto 0;
+    inset: 0;
+    z-index: 98; /* sous le header (100) : logo et burger restent accessibles */
     flex-direction: column;
     align-items: stretch;
+    justify-content: center;
     gap: 0;
-    background: var(--cream);
-    border-bottom: 1px solid var(--line);
-    box-shadow: var(--shadow-md);
-    padding: var(--sp-2) clamp(1.25rem, 4vw, 2.5rem) var(--sp-3);
-    transform: translateY(-130%);
-    transition: transform 0.35s var(--ease);
-    max-height: calc(100dvh - 72px);
+    padding: 88px clamp(2rem, 9vw, 4rem) var(--sp-4);
+    background:
+      radial-gradient(110% 90% at 85% -10%, rgba(201, 162, 39, 0.18), transparent 55%),
+      linear-gradient(160deg, var(--wine-900) 0%, #2a0710 60%, var(--wine-800) 100%);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.35s var(--ease), visibility 0s linear 0.35s;
     overflow-y: auto;
   }
-  .main-nav.open { transform: translateY(0); }
-  .main-nav a { padding: 0.9rem 0; border-bottom: 1px solid var(--line); }
-  .main-nav a:not(.btn)::after { display: none; }
-  .nav-cta { margin-top: var(--sp-2); border-bottom: none; }
+  /* Texture « rangs de vigne », comme le hero */
+  .main-nav::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    opacity: 0.06;
+    background-image: repeating-linear-gradient(105deg, #fff 0 1px, transparent 1px 46px);
+    pointer-events: none;
+  }
+  .main-nav.open {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.35s var(--ease);
+  }
+
+  /* Grands liens serif centrés, entrée en cascade */
+  .main-nav { align-items: center; text-align: center; }
+  .main-nav a:not(.btn) {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(1.65rem, 7vw, 2.2rem);
+    color: #f7efe6;
+    padding: 0.85rem 0;
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.45s var(--ease), transform 0.45s var(--ease), color 0.2s;
+  }
+  .main-nav a:not(.btn):hover { color: var(--gold-soft); }
+  .main-nav a:not(.btn)[aria-current="page"] { color: var(--gold-soft); }
+  /* pas de reflet balayé sur les grands liens du volet : couleur simple */
+  .main-nav a:not(.btn) {
+    background-image: none;
+    -webkit-text-fill-color: currentColor;
+  }
+  .main-nav.open a:not(.btn) { opacity: 1; transform: none; }
+  .main-nav.open a:nth-of-type(1) { transition-delay: 0.1s; }
+  .main-nav.open a:nth-of-type(2) { transition-delay: 0.18s; }
+  .main-nav.open a:nth-of-type(3) { transition-delay: 0.26s; }
+  .main-nav.open a:nth-of-type(4) { transition-delay: 0.34s; }
+
+  .nav-cta {
+    margin-top: var(--sp-4);
+    align-self: center;
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.45s var(--ease) 0.42s, transform 0.45s var(--ease) 0.42s,
+      background-position 0.65s var(--ease), box-shadow 0.3s var(--ease);
+  }
+  .main-nav.open .nav-cta { opacity: 1; transform: none; }
+
+  /* Croix de fermeture en haut à droite du volet */
+  .nav-close {
+    position: absolute;
+    top: 14px;
+    right: clamp(1.25rem, 4vw, 2.5rem);
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid rgba(247, 239, 230, 0.35);
+    background: transparent;
+    color: #f7efe6;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s, transform 0.3s var(--ease);
+  }
+  .nav-close:hover { border-color: var(--gold); color: var(--gold-soft); transform: rotate(90deg); }
+
+  /* Le volet ouvert a sa propre croix : on masque le burger du header */
+  .site-header.menu-open .nav-toggle { opacity: 0; pointer-events: none; }
+
+  /* Header posé sur le volet sombre : logo inversé, burger et thème en clair */
+  .site-header.menu-open,
+  .site-header.menu-open.scrolled,
+  .site-header.menu-open.header-solid {
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-bottom-color: transparent;
+    box-shadow: none;
+  }
+  .site-header.menu-open .brand-logo { filter: brightness(0) invert(1); }
+  .site-header.menu-open .nav-toggle-bar { background: #f7efe6; }
+  .site-header.menu-open .theme-toggle { color: #f7efe6; }
 }
 
 @media (max-width: 520px) {
