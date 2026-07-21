@@ -4,7 +4,7 @@
 import ThemeToggle from "./ThemeToggle.astro";
 
 interface Props {
-  active?: "accueil" | "offres" | "realisations" | "contact";
+  active?: "accueil" | "offres" | "portfolios" | "realisations" | "contact";
   solid?: boolean;
 }
 const { active, solid = false } = Astro.props;
@@ -12,6 +12,7 @@ const { active, solid = false } = Astro.props;
 const links = [
   { key: "accueil", href: "/", label: "Accueil" },
   { key: "offres", href: "/offres", label: "Offres & tarifs" },
+  { key: "portfolios", href: "/portfolios", label: "Portfolios" },
   { key: "realisations", href: "/realisations", label: "Réalisations" },
   { key: "contact", href: "/contact", label: "Contact" },
 ] as const;

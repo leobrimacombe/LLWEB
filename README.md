@@ -13,7 +13,7 @@ footer) définis une seule fois, sortie 100 % statique déployée sur Vercel.
 | `src/layouts/Base.astro` | `<head>` SEO + header + footer + scripts communs |
 | `src/layouts/Legal.astro` | Gabarit des pages légales |
 | `src/components/` | `Header`, `Footer`, `CalScript` (RDV) |
-| `src/pages/` | Les 7 pages (accueil, offres, réalisations, contact, légales, 404) |
+| `src/pages/` | Les 8 pages (accueil, offres, portfolios, réalisations, contact, légales, 404) |
 | `src/styles/global.css` | Design (palette bordeaux/or, typographie, responsive) |
 | `public/script.js` | Menu mobile, animations, lightbox démo, formulaire |
 | `public/` | Images, robots.txt, sitemap.xml |
