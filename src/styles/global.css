@@ -640,6 +640,7 @@ p { color: var(--text-soft); }
   background-image: repeating-linear-gradient(45deg, #fff 0 1px, transparent 1px 28px);
 }
 .visual-quote {
+  color: #fff;
   font-family: var(--font-display);
   font-size: clamp(1.5rem, 3.5vw, 2.1rem);
   line-height: 1.3;
@@ -1197,6 +1198,18 @@ p { color: var(--text-soft); }
 .faq-item[open] .faq-ic::after { transform: rotate(90deg); }
 .faq-item p { margin: 0 3rem 1.2rem 0.2rem; color: var(--text-soft); }
 
+/* Liens dans le texte courant (grilles, FAQ, bandeaux sombres) */
+.menu-item p a,
+.faq-item p a,
+.closing-lead a {
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.closing-lead a { color: var(--gold-soft); }
+.closing-lead a:hover { color: #fff; }
+
 /* ---------- Prise de rendez-vous (Cal.com) ---------- */
 .rdv-block { margin: var(--sp-3) 0 var(--sp-2); }
 .btn-rdv { gap: 0.6rem; }
@@ -1257,9 +1270,14 @@ p { color: var(--text-soft); }
 .site-footer { background: var(--wine-900); color: rgba(247, 239, 230, 0.78); padding-top: var(--sp-6); }
 .footer-inner {
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr;
+  grid-template-columns: 1.3fr 1fr 1.1fr 1.3fr;
   gap: var(--sp-4);
   padding-bottom: var(--sp-5);
+}
+/* 4 colonnes trop serrées : la marque passe au-dessus */
+@media (max-width: 1100px) {
+  .footer-inner { grid-template-columns: repeat(3, 1fr); }
+  .footer-brand { grid-column: 1 / -1; }
 }
 .brand-light .brand-name { color: #fff; }
 .footer-brand p { margin-top: var(--sp-2); max-width: 32ch; color: rgba(247, 239, 230, 0.7); }

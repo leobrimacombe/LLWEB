@@ -17,6 +17,9 @@
 
 - [Accueil](https://llweb.fr/) : présentation de l'agence, de ses services et des secteurs accompagnés
 - [Offres & tarifs](https://llweb.fr/offres) : formules, prix, méthode en 4 étapes et questions fréquentes
+- [Création de site internet à Strasbourg](https://llweb.fr/creation-site-internet-strasbourg) : création de site sur-mesure pour PME et TPE, zone d'intervention, questions fréquentes
+- [Refonte de site internet](https://llweb.fr/refonte-site-internet) : refonte sans perte de référencement (redirections 301, migration des contenus)
+- [Création de site e-commerce](https://llweb.fr/creation-site-e-commerce) : boutique en ligne sur-mesure, paiement sécurisé, livraison et click & collect, B2C et B2B
 - [Réalisations & démo](https://llweb.fr/realisations) : site de démonstration complet conçu de A à Z (https://vindemo.vercel.app/)
 - [Contact](https://llweb.fr/contact) : formulaire de devis gratuit et prise de rendez-vous
 

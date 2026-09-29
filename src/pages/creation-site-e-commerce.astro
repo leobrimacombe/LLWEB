@@ -1,0 +1,202 @@
+---
+import Base from "../layouts/Base.astro";
+---
+<Base
+  title="Création de site e-commerce à Strasbourg | LLWeb"
+  description="Boutique en ligne sur-mesure pour PME et commerces, à Strasbourg et partout en France : paiement sécurisé, stocks, livraison, click & collect. Dès 2 490 €."
+  canonical="https://llweb.fr/creation-site-e-commerce"
+  ogTitle="Création de site e-commerce pour vendre en ligne, en direct"
+  ogDescription="Votre boutique, vos clients, votre marge : une boutique en ligne sur-mesure, sans commission sur vos ventes."
+  active="offres"
+  solid
+>
+  <Fragment slot="head">
+    <!-- Données structurées : service + FAQ + fil d'Ariane -->
+    <script is:inline type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "@id": "https://llweb.fr/creation-site-e-commerce#service",
+          "name": "Création de site e-commerce",
+          "serviceType": "Création de boutique en ligne",
+          "description": "Création de sites e-commerce sur-mesure pour les PME, commerces et marques : catalogue produits, paiement sécurisé, gestion des stocks, livraison, retrait et click & collect, vente B2C et B2B.",
+          "url": "https://llweb.fr/creation-site-e-commerce",
+          "provider": { "@id": "https://llweb.fr/#agence" },
+          "areaServed": ["Strasbourg", "Bas-Rhin", "Haut-Rhin", "Alsace", "Grand Est", "France"],
+          "audience": { "@type": "BusinessAudience", "audienceType": "PME, commerces et marques" }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            { "@type": "Question", "name": "Combien coûte un site e-commerce ?", "acceptedAnswer": { "@type": "Answer", "text": "À partir de 2 490 € (1 992 € en ce moment avec l'offre de lancement pour nos 3 premiers clients), selon le nombre de produits, les modes de livraison et les fonctionnalités. Devis précis, gratuit et sans engagement sous 48 h." } },
+            { "@type": "Question", "name": "Quels frais prévoir en plus de la création ?", "acceptedAnswer": { "@type": "Answer", "text": "Selon la solution retenue pour votre boutique : les frais du prestataire de paiement sur chaque vente et, le cas échéant, l'abonnement de la plateforme e-commerce. Ces coûts sont détaillés en toute transparence dans le devis. LLWeb ne prend aucune commission sur vos ventes." } },
+            { "@type": "Question", "name": "Puis-je vendre aux professionnels ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Comptes professionnels, tarifs dédiés ou commande sur devis : nous définissons ensemble ce dont vous avez besoin dès le premier échange." } },
+            { "@type": "Question", "name": "Pourrai-je ajouter mes produits moi-même ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Nous mettons en ligne votre catalogue de départ, puis nous vous formons : ajouter un produit, changer un prix, gérer une commande ou un stock devient une affaire de minutes." } }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://llweb.fr/" },
+            { "@type": "ListItem", "position": 2, "name": "Création de site e-commerce", "item": "https://llweb.fr/creation-site-e-commerce" }
+          ]
+        }
+      ]
+    }
+    </script>
+  </Fragment>
+
+  <!-- ============ BANDEAU DE PAGE ============ -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow eyebrow-gold">Création de site e-commerce</p>
+      <h1>Un site e-commerce pour vendre en ligne, en direct</h1>
+      <p>
+        Vendez vos produits à vos clients, particuliers ou professionnels,
+        sans passer par une plateforme qui prélève sa part sur chaque vente.
+        Nous créons votre boutique en ligne sur-mesure, depuis Strasbourg et
+        pour toute la France.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ VENTE DIRECTE ============ -->
+  <section class="section" id="vente-directe" aria-labelledby="vente-directe-titre">
+    <div class="container split">
+      <div class="split-text reveal">
+        <h2 id="vente-directe-titre">Votre boutique, vos clients, votre marge</h2>
+        <p class="section-intro">
+          Les places de marché prélèvent une commission sur chaque commande et
+          gardent la relation client. Avec votre propre boutique, les ventes,
+          les données et la fidélisation restent chez vous.
+        </p>
+        <ul class="check-list">
+          <li>Paiement sécurisé : CB, Apple Pay, Google Pay</li>
+          <li>Livraison, retrait sur place ou click &amp; collect</li>
+          <li>Gestion simple des commandes et des stocks</li>
+          <li>Vente aux particuliers comme aux professionnels</li>
+          <li>Une boutique rapide, pensée d'abord pour le mobile</li>
+        </ul>
+        <a class="btn btn-wine" href="/contact">Parlons de votre boutique</a>
+      </div>
+      <div class="split-visual reveal">
+        <a class="shot shot-main" href="https://vindemo.vercel.app/boutique" target="_blank" rel="noopener">
+          <span class="shot-chrome" aria-hidden="true"><i></i><i></i><i></i><em>vindemo.vercel.app/boutique</em></span>
+          <span class="shot-media">
+            <img src="/images/demo-boutique.jpg" alt="Boutique en ligne du site de démonstration conçu par LLWeb" width="1000" height="633" loading="lazy" />
+          </span>
+          <span class="shot-caption">
+            <strong>Notre démo : une boutique complète</strong>
+            Catalogue, fiches produits et panier, conçus de A à Z. Cliquez pour l'explorer.
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FONCTIONNALITÉS ============ -->
+  <section class="section section-tint" id="inclus" aria-labelledby="inclus-titre">
+    <div class="container">
+      <header class="section-head reveal">
+        <h2 id="inclus-titre">Tout ce qu'il faut pour vendre en ligne</h2>
+        <p class="section-intro">
+          Une boutique pensée pour vos produits et vos clients, et que vous
+          gérez vous-même au quotidien.
+        </p>
+      </header>
+
+      <ul class="menu-grid">
+        <li class="menu-item reveal">
+          <span class="menu-ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+          </span>
+          <h3>Un catalogue clair</h3>
+          <p>Fiches produits soignées, photos, variantes, filtres : vos clients trouvent vite ce qu'ils cherchent.</p>
+        </li>
+        <li class="menu-item reveal">
+          <span class="menu-ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></svg>
+          </span>
+          <h3>Paiement sécurisé</h3>
+          <p>Carte bancaire, Apple Pay et Google Pay, avec un tunnel de commande court qui limite les paniers abandonnés.</p>
+        </li>
+        <li class="menu-item reveal">
+          <span class="menu-ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h11v10H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17.5" cy="17.5" r="1.8"/></svg>
+          </span>
+          <h3>Livraison &amp; retrait</h3>
+          <p>Frais de port, retrait en magasin, click &amp; collect : vous choisissez ce que vous proposez, et où.</p>
+        </li>
+        <li class="menu-item reveal">
+          <span class="menu-ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L4 17v3h3l5.3-5.3a4 4 0 0 0 5.4-5.4l-2.3 2.3-2-2z"/></svg>
+          </span>
+          <h3>Gestion au quotidien</h3>
+          <p>Commandes, stocks, produits, promotions : une interface simple, et une formation pour la prendre en main.</p>
+        </li>
+        <li class="menu-item reveal">
+          <span class="menu-ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+          </span>
+          <h3>Produits bien référencés</h3>
+          <p>Chaque fiche produit est construite pour Google : titre, description, données structurées, adresse lisible.</p>
+        </li>
+        <li class="menu-item reveal">
+          <span class="menu-ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="m9 12 2 2 4-4"/></svg>
+          </span>
+          <h3>Conforme dès le départ</h3>
+          <p>CGV, droit de rétractation, mentions légales, RGPD : les obligations de la vente en ligne sont intégrées dès la conception.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section" id="faq" aria-labelledby="faq-titre">
+    <div class="container">
+      <header class="section-head reveal">
+        <h2 id="faq-titre">Vos questions sur l'e-commerce</h2>
+      </header>
+
+      <div class="faq">
+        <details class="faq-item reveal">
+          <summary>Combien coûte un site e-commerce&nbsp;?<span class="faq-ic" aria-hidden="true"></span></summary>
+          <p>À partir de 2&nbsp;490&nbsp;€ (1&nbsp;992&nbsp;€ en ce moment avec l'offre de lancement pour nos 3 premiers clients), selon le nombre de produits, les modes de livraison et les fonctionnalités. Devis précis, gratuit et sans engagement sous 48&nbsp;h. Voir aussi nos <a href="/offres">offres &amp; tarifs</a>.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Quels frais prévoir en plus de la création&nbsp;?<span class="faq-ic" aria-hidden="true"></span></summary>
+          <p>Selon la solution retenue pour votre boutique : les frais du prestataire de paiement sur chaque vente et, le cas échéant, l'abonnement de la plateforme e-commerce. Ces coûts sont détaillés en toute transparence dans le devis. LLWeb ne prend aucune commission sur vos ventes.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Puis-je vendre aux professionnels&nbsp;?<span class="faq-ic" aria-hidden="true"></span></summary>
+          <p>Oui. Comptes professionnels, tarifs dédiés ou commande sur devis : nous définissons ensemble ce dont vous avez besoin dès le premier échange.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Pourrai-je ajouter mes produits moi-même&nbsp;?<span class="faq-ic" aria-hidden="true"></span></summary>
+          <p>Oui. Nous mettons en ligne votre catalogue de départ, puis nous vous formons : ajouter un produit, changer un prix, gérer une commande ou un stock devient une affaire de minutes.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA FINAL ============ -->
+  <section class="section section-dark" aria-labelledby="cta-titre">
+    <div class="container narrow center">
+      <h2 id="cta-titre" class="closing-title reveal">Lançons votre boutique en ligne</h2>
+      <p class="closing-lead reveal">
+        Explorez notre <a href="https://vindemo.vercel.app/boutique" target="_blank" rel="noopener">boutique de démonstration</a>,
+        puis parlons de vos produits : devis gratuit sous 48&nbsp;h, sans engagement.
+      </p>
+      <div class="cta-row reveal">
+        <a class="btn btn-gold" href="/contact">Demander un devis gratuit</a>
+        <button type="button" class="btn btn-ghost"
+                data-cal-namespace="appel-decouverte"
+                data-cal-link="llweb/appel-decouverte"
+                data-cal-config='{"layout":"month_view","theme":"light"}'>Réserver un appel</button>
+      </div>
+    </div>
+  </section>
+</Base>

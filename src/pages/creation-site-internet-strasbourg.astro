@@ -1,0 +1,237 @@
+---
+import Base from "../layouts/Base.astro";
+---
+<Base
+  title="Création de site internet à Strasbourg pour PME | LLWeb"
+  description="Création de site internet sur-mesure à Strasbourg pour PME, TPE et indépendants : rapide, bien référencé, facile à gérer. Dès 890 €, devis sous 48 h."
+  canonical="https://llweb.fr/creation-site-internet-strasbourg"
+  ogTitle="Création de site internet à Strasbourg pour PME & TPE"
+  ogDescription="Un site sur-mesure qui inspire confiance, se trouve sur Google et transforme les visites en demandes de devis."
+  active="offres"
+  solid
+>
+  <Fragment slot="head">
+    <!-- Données structurées : service + FAQ + fil d'Ariane -->
+    <script is:inline type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "@id": "https://llweb.fr/creation-site-internet-strasbourg#service",
+          "name": "Création de site internet à Strasbourg",
+          "serviceType": "Création de site internet",
+          "description": "Conception et développement de sites internet sur-mesure pour les PME, TPE et indépendants à Strasbourg, en Alsace et dans toute la France : site vitrine, site d'entreprise, référencement local, formation à la prise en main.",
+          "url": "https://llweb.fr/creation-site-internet-strasbourg",
+          "provider": { "@id": "https://llweb.fr/#agence" },
+          "areaServed": ["Strasbourg", "Eurométropole de Strasbourg", "Bas-Rhin", "Haut-Rhin", "Alsace", "Grand Est", "France"],
+          "audience": { "@type": "BusinessAudience", "audienceType": "PME, TPE et indépendants" }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            { "@type": "Question", "name": "Combien coûte la création d'un site internet pour une PME ?", "acceptedAnswer": { "@type": "Answer", "text": "Un site vitrine professionnel démarre à 890 € (jusqu'à 5 pages) et un site e-commerce à 2 490 €. Un site d'entreprise plus complet (nombreuses pages, multilingue, fonctionnalités spécifiques) fait l'objet d'un devis. En ce moment, -20 % pour nos 3 premiers clients. Devis gratuit sous 48 h." } },
+            { "@type": "Question", "name": "Quelle différence avec un site Wix ou un site en abonnement ?", "acceptedAnswer": { "@type": "Answer", "text": "Un site sur-mesure vous appartient : pas de loyer mensuel, pas de dépendance à une plateforme, et vous pouvez changer de prestataire quand vous le souhaitez. Il est aussi construit dès le départ pour la vitesse et le référencement." } },
+            { "@type": "Question", "name": "En combien de temps mon site sera-t-il visible sur Google ?", "acceptedAnswer": { "@type": "Answer", "text": "Nous déclarons votre site à Google dès la mise en ligne. Il apparaît en général sur le nom de votre entreprise en quelques jours à quelques semaines. Se positionner sur des recherches concurrentielles comme « votre métier + votre ville » prend plus de temps, souvent plusieurs mois, et dépend aussi de votre fiche Google et de vos avis clients." } },
+            { "@type": "Question", "name": "Faut-il être à Strasbourg pour travailler avec vous ?", "acceptedAnswer": { "@type": "Answer", "text": "Non. Nous sommes basés à Strasbourg et nous nous déplaçons dans toute l'Alsace, mais une grande partie du travail se fait très bien à distance : visio, partage d'écran, validation des maquettes en ligne." } },
+            { "@type": "Question", "name": "Pourrons-nous modifier le site nous-mêmes ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Nous vous formons à la mise à jour des textes, des photos et des actualités. Pour les évolutions plus techniques, nous intervenons à la demande à 39 €/heure, avec une estimation validée avant chaque intervention." } }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://llweb.fr/" },
+            { "@type": "ListItem", "position": 2, "name": "Création de site internet à Strasbourg", "item": "https://llweb.fr/creation-site-internet-strasbourg" }
+          ]
+        }
+      ]
+    }
+    </script>
+  </Fragment>
+
+  <!-- ============ BANDEAU DE PAGE ============ -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow eyebrow-gold">Création de site internet · Strasbourg</p>
+      <h1>Création de site internet à Strasbourg pour les PME et TPE</h1>
+      <p>
+        Basés à Strasbourg, nous concevons des sites sur-mesure pour les
+        entreprises d'Alsace et de toute la France : un site qui inspire
+        confiance, se trouve sur Google et transforme les visites en demandes
+        de devis.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ ENJEUX ============ -->
+  <section class="section" id="enjeux" aria-labelledby="enjeux-titre">
+    <div class="container split">
+      <div class="split-text reveal">
+        <h2 id="enjeux-titre">Votre site est souvent votre premier rendez-vous</h2>
+        <p class="section-intro">
+          Avant d'appeler, un prospect regarde votre site. En quelques
+          secondes, il décide si votre entreprise est sérieuse, si elle fait
+          ce qu'il cherche et comment vous joindre. Un site daté ou confus, et
+          il passe au concurrent suivant ; un site clair et rapide, et il vous
+          contacte.
+        </p>
+        <ul class="check-list">
+          <li>Une offre compréhensible en quelques secondes</li>
+          <li>Des contacts faciles : formulaire, téléphone, rendez-vous</li>
+          <li>Visible sur Google à Strasbourg et dans votre secteur</li>
+          <li>Rapide et impeccable sur mobile</li>
+          <li>Simple à mettre à jour par votre équipe</li>
+        </ul>
+        <a class="btn btn-wine" href="/contact">Parlons de votre projet</a>
+      </div>
+      <div class="split-visual reveal">
+        <a class="shot shot-main" href="https://vindemo.vercel.app/" target="_blank" rel="noopener">
+          <span class="shot-chrome" aria-hidden="true"><i></i><i></i><i></i><em>vindemo.vercel.app</em></span>
+          <span class="shot-media">
+            <img src="/images/demo-accueil.jpg" alt="Page d'accueil du site de démonstration conçu par LLWeb" width="1200" height="759" loading="lazy" />
+          </span>
+          <span class="shot-caption">
+            <strong>Notre site de démonstration</strong>
+            Conçu de A à Z, avec le soin que nous mettrons dans le vôtre. Cliquez pour l'explorer.
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CE QUE COMPREND LE SITE ============ -->
+  <section class="section section-tint" id="inclus" aria-labelledby="inclus-titre">
+    <div class="container">
+      <header class="section-head reveal">
+        <h2 id="inclus-titre">Ce que comprend la création de votre site</h2>
+        <p class="section-intro">
+          Chaque site est dessiné et développé à la main pour votre
+          entreprise, jamais à partir d'un thème acheté.
+        </p>
+      </header>
+
+      <ul class="menu-grid">
+        <li class="menu-item reveal">
+          <span class="menu-ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.8 2.8 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>
+          </span>
+          <h3>Design sur-mesure</h3>
+          <p>Une interface à vos couleurs, pensée pour votre clientèle et votre façon de vendre, sur ordinateur comme sur mobile.</p>
+        </li>
+        <li class="menu-item reveal">
+          <span class="menu-ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </span>
+          <h3>Pensé pour générer des contacts</h3>
+          <p>Appels à l'action clairs, formulaires courts, prise de rendez-vous en ligne : chaque page mène à une prise de contact.</p>
+        </li>
+        <li class="menu-item reveal">
+          <span class="menu-ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+          </span>
+          <h3>Référencement local</h3>
+          <p>Structure propre, balises optimisées, données structurées et conseils pour votre fiche Google : les bases pour être trouvé à Strasbourg et en Alsace.</p>
+        </li>
+        <li class="menu-item reveal">
+          <span class="menu-ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>
+          </span>
+          <h3>Rapide et sécurisé</h3>
+          <p>Des pages légères qui s'affichent vite, en HTTPS, sur un hébergement fiable : agréable pour vos visiteurs, apprécié de Google.</p>
+        </li>
+        <li class="menu-item reveal">
+          <span class="menu-ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="m9 12 2 2 4-4"/></svg>
+          </span>
+          <h3>Conforme au RGPD</h3>
+          <p>Mentions légales, politique de confidentialité, formulaires et mesure d'audience respectueux de vos visiteurs.</p>
+        </li>
+        <li class="menu-item reveal">
+          <span class="menu-ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L4 17v3h3l5.3-5.3a4 4 0 0 0 5.4-5.4l-2.3 2.3-2-2z"/></svg>
+          </span>
+          <h3>Autonome au quotidien</h3>
+          <p>Une formation à la prise en main : vous modifiez textes, photos et actualités sans dépendre de nous.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ ZONE D'INTERVENTION ============ -->
+  <section class="section" id="zone" aria-labelledby="zone-titre">
+    <div class="container">
+      <header class="section-head centered reveal">
+        <h2 id="zone-titre">À Strasbourg, en Alsace et partout en France</h2>
+        <p class="section-intro">
+          Nous rencontrons volontiers nos clients sur place, à Strasbourg et
+          dans toute l'Alsace. Pour le reste de la France, tout se passe en
+          visio, du premier échange à la formation.
+        </p>
+      </header>
+      <ul class="chips reveal" aria-label="Zones où nous intervenons">
+        <li>Strasbourg</li>
+        <li>Schiltigheim</li>
+        <li>Illkirch-Graffenstaden</li>
+        <li>Haguenau</li>
+        <li>Molsheim</li>
+        <li>Obernai</li>
+        <li>Sélestat</li>
+        <li>Saverne</li>
+        <li>Colmar</li>
+        <li>Mulhouse</li>
+        <li>Grand Est</li>
+        <li>Toute la France</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section section-tint" id="faq" aria-labelledby="faq-titre">
+    <div class="container">
+      <header class="section-head reveal">
+        <h2 id="faq-titre">Vos questions sur la création de site</h2>
+      </header>
+
+      <div class="faq">
+        <details class="faq-item reveal">
+          <summary>Combien coûte la création d'un site internet pour une PME&nbsp;?<span class="faq-ic" aria-hidden="true"></span></summary>
+          <p>Un site vitrine professionnel démarre à 890&nbsp;€ (jusqu'à 5 pages) et un site e-commerce à 2&nbsp;490&nbsp;€. Un site d'entreprise plus complet (nombreuses pages, multilingue, fonctionnalités spécifiques) fait l'objet d'un devis. En ce moment, -20&nbsp;% pour nos 3 premiers clients. Tous les détails sur la page <a href="/offres">offres &amp; tarifs</a>.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Quelle différence avec un site Wix ou un site en abonnement&nbsp;?<span class="faq-ic" aria-hidden="true"></span></summary>
+          <p>Un site sur-mesure vous appartient : pas de loyer mensuel, pas de dépendance à une plateforme, et vous pouvez changer de prestataire quand vous le souhaitez. Il est aussi construit dès le départ pour la vitesse et le référencement, au lieu d'empiler des modules génériques.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>En combien de temps mon site sera-t-il visible sur Google&nbsp;?<span class="faq-ic" aria-hidden="true"></span></summary>
+          <p>Nous déclarons votre site à Google dès la mise en ligne. Il apparaît en général sur le nom de votre entreprise en quelques jours à quelques semaines. Se positionner sur des recherches concurrentielles comme «&nbsp;votre métier + votre ville&nbsp;» prend plus de temps, souvent plusieurs mois, et dépend aussi de votre fiche Google et de vos avis clients.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Faut-il être à Strasbourg pour travailler avec vous&nbsp;?<span class="faq-ic" aria-hidden="true"></span></summary>
+          <p>Non. Nous sommes basés à Strasbourg et nous nous déplaçons dans toute l'Alsace, mais une grande partie du travail se fait très bien à distance : visio, partage d'écran, validation des maquettes en ligne.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Pourrons-nous modifier le site nous-mêmes&nbsp;?<span class="faq-ic" aria-hidden="true"></span></summary>
+          <p>Oui. Nous vous formons à la mise à jour des textes, des photos et des actualités. Pour les évolutions plus techniques, nous intervenons à la demande à 39&nbsp;€/heure, avec une estimation validée avant chaque intervention.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA FINAL ============ -->
+  <section class="section section-dark" aria-labelledby="cta-titre">
+    <div class="container narrow center">
+      <h2 id="cta-titre" class="closing-title reveal">Parlons de votre futur site</h2>
+      <p class="closing-lead reveal">
+        Devis gratuit sous 48&nbsp;h, ou un appel découverte de 30&nbsp;minutes
+        pour faire le point sur votre projet. Sans engagement.
+      </p>
+      <div class="cta-row reveal">
+        <a class="btn btn-gold" href="/contact">Demander un devis gratuit</a>
+        <button type="button" class="btn btn-ghost"
+                data-cal-namespace="appel-decouverte"
+                data-cal-link="llweb/appel-decouverte"
+                data-cal-config='{"layout":"month_view","theme":"light"}'>Réserver un appel</button>
+      </div>
+    </div>
+  </section>
+</Base>
