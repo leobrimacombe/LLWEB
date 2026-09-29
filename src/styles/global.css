@@ -1,11 +1,11 @@
 /* =========================================================
    LLWeb — Feuille de style
-   Palette terroir : lie-de-vin, or champagne, crème parchemin
+   Palette : bordeaux profond, or champagne, crème parchemin
    Typographie : Cinzel (titres) + Josefin Sans (texte)
    ========================================================= */
 
 :root {
-  /* Couleurs — vin / terroir */
+  /* Couleurs — bordeaux / or */
   --wine-900: #3b0a14;
   --wine-800: #5a1220;
   --wine-700: #7a1b2e;   /* Bordeaux — couleur principale */
@@ -519,7 +519,7 @@ p { color: var(--text-soft); }
 [data-theme="dark"] .link-arrow { color: #e2a9b5; }
 [data-theme="dark"] .link-arrow:hover { color: #f0c6cf; }
 
-/* ---------- Section Services — « carte du vigneron » ---------- */
+/* ---------- Grille éditoriale (services, secteurs) ---------- */
 .menu-grid {
   list-style: none;
   padding: 0;

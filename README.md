@@ -1,6 +1,6 @@
 # LLWeb — Site vitrine
 
-Site vitrine de **LLWeb**, agence web pour les **artisans, commerces et producteurs**
+Site vitrine de **LLWeb**, agence web pour les **PME, TPE et indépendants**
 (Strasbourg & toute la France).
 
 Construit avec **[Astro](https://astro.build)** : composants partagés (header,

@@ -2,11 +2,11 @@
 import Base from "../layouts/Base.astro";
 ---
 <Base
-  title="LLWeb | Agence web à Strasbourg pour artisans, commerces & vignerons"
-  description="LLWeb conçoit des sites vitrines et boutiques en ligne élégants pour artisans, commerces, vignerons et producteurs, à Strasbourg, en Alsace et dans toute la France. Devis gratuit, réponse sous 48 h."
+  title="LLWeb | Agence web à Strasbourg pour PME, TPE & indépendants"
+  description="LLWeb crée des sites vitrines, sites d'entreprise et boutiques en ligne sur-mesure pour les PME, TPE et indépendants, à Strasbourg, en Alsace et dans toute la France. Devis gratuit, réponse sous 48 h."
   canonical="https://llweb.fr/"
-  ogTitle="LLWeb | L'agence web des artisans, commerces et producteurs"
-  ogDescription="Des sites web élégants pour les métiers de savoir-faire : racontez votre histoire, vendez en direct et faites venir les clients."
+  ogTitle="LLWeb | L'agence web des PME, TPE & indépendants"
+  ogDescription="Des sites web sur-mesure, rapides et bien référencés : gagnez en crédibilité, attirez de nouveaux clients et vendez en ligne."
   active="accueil"
 >
   <Fragment slot="head">
@@ -19,7 +19,7 @@ import Base from "../layouts/Base.astro";
           "@type": "ProfessionalService",
           "@id": "https://llweb.fr/#agence",
           "name": "LLWeb",
-          "description": "Agence web à Strasbourg, en Alsace, pour artisans, commerces, vignerons et producteurs : sites vitrines, boutiques en ligne, réservations en ligne et référencement local.",
+          "description": "Agence web à Strasbourg, en Alsace, pour les PME, TPE, commerces, artisans et indépendants : sites vitrines, sites d'entreprise, e-commerce, refonte de site et référencement naturel.",
           "url": "https://llweb.fr/",
           "image": "https://llweb.fr/images/og-image.png",
           "logo": "https://llweb.fr/images/og-image.png",
@@ -33,7 +33,7 @@ import Base from "../layouts/Base.astro";
           },
           "areaServed": ["Alsace", "Strasbourg", "Bas-Rhin", "Haut-Rhin", "Colmar", "Mulhouse", "Grand Est", "France"],
           "priceRange": "€€",
-          "knowsAbout": ["Création de site internet", "Site vitrine", "Boutique en ligne", "Référencement local", "Identité visuelle", "Site internet pour vigneron", "Site internet pour artisan", "Site internet pour commerce"]
+          "knowsAbout": ["Création de site internet", "Site vitrine", "Site d'entreprise", "E-commerce", "Refonte de site internet", "Référencement naturel (SEO)", "Identité visuelle", "Site internet pour PME", "Site internet pour TPE", "Site internet pour profession libérale", "Site internet pour commerce", "Site internet pour artisan"]
         },
         {
           "@type": "WebSite",
@@ -70,13 +70,14 @@ import Base from "../layouts/Base.astro";
       </span>
     </div>
     <div class="container hero-inner">
-      <p class="eyebrow eyebrow-gold">Agence web pour les artisans, commerces &amp; producteurs</p>
-      <h1 id="hero-titre">Votre savoir-faire mérite un grand site</h1>
+      <p class="eyebrow eyebrow-gold">Agence web pour les PME, TPE &amp; indépendants</p>
+      <h1 id="hero-titre">Un site à la hauteur de votre entreprise</h1>
       <p class="hero-lead">
-        LLWeb crée des sites web élégants et performants pour les artisans,
-        commerçants, vignerons et producteurs, à Strasbourg, en Alsace et
-        partout en France. Racontez votre histoire, vendez en direct
-        et faites venir les clients, du quartier ou du monde entier.
+        LLWeb conçoit des sites web sur-mesure, rapides et bien référencés
+        pour les PME, TPE, commerces et indépendants, à Strasbourg, en Alsace
+        et partout en France. Gagnez en crédibilité, attirez de nouveaux
+        clients et vendez en ligne, avec un interlocuteur qui connaît votre
+        dossier.
       </p>
       <div class="hero-actions">
         <a class="btn btn-gold" href="/contact">Demander un devis gratuit</a>
@@ -109,15 +110,17 @@ import Base from "../layouts/Base.astro";
       <header class="section-head centered reveal">
         <h2 id="services-titre">Tout ce qu'il faut pour briller en ligne</h2>
         <p class="section-intro">
-          De la première visite à la vente, nous accompagnons artisans,
-          commerces et producteurs sur chaque étape de leur présence numérique.
+          De la première visite au premier contrat, nous accompagnons les
+          entreprises sur chaque étape de leur présence en ligne.
         </p>
       </header>
       <ul class="chips reveal" aria-label="Nos services">
         <li>Site vitrine</li>
-        <li>Boutique en ligne</li>
-        <li>Réservations en ligne</li>
-        <li>Référencement local</li>
+        <li>Site d'entreprise</li>
+        <li>E-commerce</li>
+        <li>Refonte de site</li>
+        <li>Prise de rendez-vous en ligne</li>
+        <li>Référencement naturel (SEO)</li>
         <li>Identité visuelle</li>
         <li>Maintenance &amp; accompagnement</li>
       </ul>
@@ -131,21 +134,17 @@ import Base from "../layouts/Base.astro";
   <section class="section section-tint" id="pourquoi" aria-labelledby="pourquoi-titre">
     <div class="container split">
       <div class="split-text reveal">
-        <h2 id="pourquoi-titre">Nous parlons le langage de votre métier</h2>
+        <h2 id="pourquoi-titre">Un partenaire web, pas un prestataire de plus</h2>
         <p class="section-intro">
-          Nous ne faisons pas des sites « pour tout le monde ». Artisan,
-          commerçant, restaurateur, vigneron ou producteur : nous prenons le
-          temps de comprendre votre activité, vos saisons et ce qui fait votre
-          différence.
+          Nous ne vendons pas des modèles à la chaîne. PME, cabinet, commerce
+          ou jeune entreprise : nous commençons par comprendre votre activité,
+          vos clients et vos objectifs, puis nous construisons le site qui y
+          répond.
         </p>
-        <a class="link-arrow" href="/site-internet-vigneron-alsace">
-          Vous êtes vigneron en Alsace&nbsp;? Voir notre offre dédiée
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
         <ul class="check-list">
-          <li>Pensé pour les indépendants, artisans et producteurs</li>
-          <li>La vente directe, c'est plus de marge pour vous</li>
+          <li>Un site pensé pour générer des contacts et des ventes</li>
           <li>Du sur-mesure, jamais un modèle recyclé</li>
+          <li>Vous restez propriétaire de votre site et de votre domaine</li>
           <li>Un interlocuteur unique, joignable et humain</li>
         </ul>
         <a class="btn btn-wine" href="/contact">Parlons de votre projet</a>
@@ -173,6 +172,65 @@ import Base from "../layouts/Base.astro";
           </span>
         </button>
       </div>
+    </div>
+  </section>
+
+  <!-- ============ POUR QUI ============ -->
+  <section class="section" id="secteurs" aria-labelledby="secteurs-titre">
+    <div class="container">
+      <header class="section-head reveal">
+        <h2 id="secteurs-titre">Pour toutes les entreprises qui veulent grandir</h2>
+        <p class="section-intro">
+          Quel que soit votre secteur, un bon site a le même rôle : inspirer
+          confiance et transformer les visiteurs en clients. Nous l'adaptons
+          à votre métier.
+        </p>
+      </header>
+
+      <ul class="menu-grid">
+        <li class="menu-item reveal">
+          <span class="menu-ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1.5"/><path d="M9 7h1M14 7h1M9 11h1M14 11h1M9 15h1M14 15h1M10 21v-3h4v3"/></svg>
+          </span>
+          <h3>PME &amp; entreprises de services</h3>
+          <p>Un site d'entreprise crédible pour vos clients, vos partenaires et vos futurs collaborateurs : offre, références, équipe, recrutement.</p>
+        </li>
+        <li class="menu-item reveal">
+          <span class="menu-ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l1.5-4.5h15L21 9M4 9h16v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zM9 13h6"/></svg>
+          </span>
+          <h3>Commerces &amp; restauration</h3>
+          <p>Horaires, carte, réservations, click &amp; collect : faites venir les clients du quartier et vendez aussi en ligne.</p>
+        </li>
+        <li class="menu-item reveal">
+          <span class="menu-ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L4 17v3h3l5.3-5.3a4 4 0 0 0 5.4-5.4l-2.3 2.3-2-2z"/></svg>
+          </span>
+          <h3>Artisans &amp; BTP</h3>
+          <p>Vos chantiers en photos, vos certifications et un formulaire de devis clair : transformez les visiteurs en demandes concrètes.</p>
+        </li>
+        <li class="menu-item reveal">
+          <span class="menu-ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></svg>
+          </span>
+          <h3>Professions libérales</h3>
+          <p>Avocats, cabinets, santé, conseil : une présence sobre et rassurante, avec prise de rendez-vous en ligne.</p>
+        </li>
+        <li class="menu-item reveal">
+          <span class="menu-ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 10 14l4 4 6-8"/><path d="M15 10h5v5"/></svg>
+          </span>
+          <h3>Startups &amp; B2B</h3>
+          <p>Une page qui explique votre offre en quelques secondes et génère des prospects qualifiés, prête à évoluer avec vous.</p>
+        </li>
+        <li class="menu-item reveal">
+          <span class="menu-ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V10l6 4V10l6 4V6l6-3v18z"/><path d="M3 21h18"/></svg>
+          </span>
+          <h3>Industrie &amp; production</h3>
+          <p>Savoir-faire, références, catalogue produits, versions multilingues : un site à la hauteur de votre outil de production.</p>
+        </li>
+      </ul>
     </div>
   </section>
 

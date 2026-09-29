@@ -1,4 +1,7 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/site-internet-vigneron-alsace", "destination": "/", "permanent": true }
+  ]
 }
